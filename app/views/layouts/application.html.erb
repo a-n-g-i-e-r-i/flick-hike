@@ -8,7 +8,47 @@
 </head>
 <body>
 
+<div id="notice" class="accent-text"><%= notice %></div>
+<% flash.each do |name, msg| %>
+  <div id="notice" class="accent-text">
+    <small> <%= name.capitalize %>: <%= msg %> </small>
+  </div>
+<% end %>
+
+<div class="container" id="center-content">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <div>
+        <img class="navbar-brand-icon" src = "/assets/navbar-brand-icon.png">
+      </div> -->
+      <a class="navbar-brand" href="/">Flick Hike</a>
+    </div>
+    <div class="collapse navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Scenes", root_path %></li>
+        <li><%= link_to "Lists", root_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
+            <li><%= link_to "Log Out", destroy_session_path %></li>
+        <% else %>
+            <li><%= link_to "Signup", new_user_path %></li>
+            <li><%= link_to "Log In", new_session_path %></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
 <%= yield %>
 
+</div>
 </body>
 </html>

@@ -14,7 +14,7 @@ User.create ({
   username: "bagel",
   description: "Film lover | Owner of many bad romantic comedies | Lover of San Francisco | Like to walk around.",
   email: "bagel@isangieri.com",
-  password_digest: "yoyoyo"
+  password: "yoyoyo"
 })
 
 20.times do
@@ -22,7 +22,7 @@ User.create ({
   user_params[:username] = FFaker::Name.last_name
   user_params[:description] = FFaker::Lorem.phrase
 	user_params[:email] = FFaker::Internet.email
-	user_params[:password_digest]  = "123456"
+	user_params[:password]  = "123456"
 
 	new_user = User.create(user_params)
 

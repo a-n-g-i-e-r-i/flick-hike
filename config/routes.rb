@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-  root to: "users#index"
+  root to: "pages#home"
 
-  resources :users
+  resources :users, :lists
+
+  get "/about", to: "pages#about", as: "about"
+
+  get "/scenes", to: "scenes#index", as: "scenes"
+  get "/scenes/:id", to: "scenes#show", as: "scene"
 
   post "/sessions", to: "sessions#create"
   get "/login", to: "sessions#new", as: "new_session"

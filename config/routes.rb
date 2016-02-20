@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :users, :lists
 
+  get "/signup", to: "users#new", as: "signup"
+
   get "/about", to: "pages#about", as: "about"
 
   get "/scenes", to: "scenes#index", as: "scenes"

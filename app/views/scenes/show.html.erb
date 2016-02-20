@@ -1,0 +1,19 @@
+<div class="container" id="scene_info">
+  <div class="col-lg-6 col-lg-offset-3 text-center">
+    <div>
+     	<h1 class="title">Scene From the Film <%= @scene.title %></h1>
+    </div>
+    <div>
+      <p><span class="context-text"><%= @scene.locations %></span></p>
+      <p><span class="context-text">joined on</span> <span class="accent-text"><%= @scene.created_at.strftime("%B %-d, %Y, at %l:%M%P") %></span></p>
+      <%= button_to "back to scenes", scenes_path, :method => :get, class: 'btn btn-purple' %>
+    </div>
+  </div>
+</div>
+
+<div class = "container">
+  <div class="col-lg-6 col-lg-offset-3 text-center">
+    <h2 class="title">References</h2><hr>
+    <h4>This Scene has not been added to any lists yet</h4>
+  </div>
+</div>

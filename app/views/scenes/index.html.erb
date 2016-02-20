@@ -1,0 +1,17 @@
+<h1>Scenes</h1>
+<% if current_user %>
+  <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-purple' %>
+<% end %>
+<% @scenes.each do |scene| %>
+  <p>
+    <strong><%= link_to scene.title, scene_path(scene.id) %></strong><br>
+      <%= scene.release_year%>
+      <%= scene.director%>
+      <%= scene.writer%>
+      <%= scene.locations%>
+      <%= scene.actor_1%>
+      <%= scene.actor_2%>
+      <%= scene.actor_3%>
+      <%= scene.production_company%>
+  </p>
+<% end %>

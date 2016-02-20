@@ -1,0 +1,14 @@
+<%= form_for @list, :html => {:class => "form-horizontal center-block"} do |f| %>
+  <h1 class="form-group text-color title">Curate List</h1>
+  <div class="form-group">
+    <%= f.label :title, "title", class: " control-label" %>
+    <%= f.text_field :title, :required => true, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, "description", class: " control-label" %>
+    <%= f.text_area :description, :required => true, size: "60x15", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Curate", class: "btn btn-default btn-purple center-bl form-control" %>
+  </div>
+<% end %>

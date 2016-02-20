@@ -1,0 +1,18 @@
+<h3 class="title"><%= @list.title %></h3>
+<div>
+  <div class="button"><p><span class="context-text">curator</span> <span class="accent-text"><%=link_to "#{@list.user.username}", user_path(@list.user.id), class: "accent-text" %></span></p>
+  </div><br><hr>
+  <p><%= @list.description %></p>
+</div><br><hr>
+
+<% if current_user == @list.user %>
+   <div>
+    <div class = "button">
+      <%= link_to "Edit", edit_list_path(@list.id), class: 'btn btn-purple' %>
+    </div>
+    <div class = "button">
+      <%= button_to "Delete", list_path(@list),
+   { method: :delete, data: { confirm: "Are you sure you want to delete '#{@list.title}'?"}, class: 'btn btn-purple' } %>
+    </div>
+  </div>
+<% end %>

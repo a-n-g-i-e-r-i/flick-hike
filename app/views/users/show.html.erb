@@ -27,15 +27,15 @@
       <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-purple' %>
     <% end %>
     <% if @user.lists.size > 0 %>
-    <% @user.lists.each do |list| %>
-      <h4><%= link_to list.title, list_path(list.id), class: 'title accent-text'%><br><br><%= list.created_at.strftime("%B %-d, %Y, at %l:%M%P") %></h4>
-      <% if current_user == list.user %>
-      </br>
+      <% @user.lists.each do |list| %>
+        <h4><%= link_to list.title, list_path(list.id), class: 'title accent-text'%><br><br><%= list.created_at.strftime("%B %-d, %Y, at %l:%M%P") %></h4>
+        <% if current_user == list.user %>
+        </br>
+        <% end %>
+        <br><hr>
       <% end %>
-      <br><hr>
+    <% else %>
+      <h4>This User has not posted any lists</h4>
     <% end %>
-  <% else %>
-    <h4>This User has not posted any lists</h4>
-  <% end %>
   </div>
 </div>

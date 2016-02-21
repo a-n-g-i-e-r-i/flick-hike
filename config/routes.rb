@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get "/scenes", to: "scenes#index", as: "scenes"
   get "/scenes/:id", to: "scenes#show", as: "scene"
+  get "/scenes/:id/lists/new", to: "lists#new", as: "scene_new_list"
 
   post "/sessions", to: "sessions#create"
   get "/login", to: "sessions#new", as: "new_session"

@@ -13,6 +13,8 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     current_user.lists << @list
+    current_scene.lists << @list
+    # @list.scenes.push(current_scene)
     if @list.save
       flash[:notice] = "Successfully created list."
       redirect_to list_path(@list)

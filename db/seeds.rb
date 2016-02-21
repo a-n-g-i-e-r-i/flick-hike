@@ -6,25 +6,24 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# new_scene = Scene.create ({
+#   locations: "Mason & California Streets, San Francisco, CA",
+#   title: "180",
+#   writer: "Umarji Anuradha, Jayendra, Aarthi Sriram, & Suba ",
+#   director: "Jayendra",
+#   release_year: "2011",
+#   production_company: "SPI Cinemas",
+#   actor_1: "Siddarth",
+#   actor_2: "Nithya Menon",
+#   actor_3: "Priya Anand"
+# })
+
 include ActionView::Helpers
 
 User.destroy_all
 List.destroy_all
 Scene.destroy_all
-
-1.times do
-  new_scene = Scene.create ({
-    locations: "Mason & California Streets, San Francisco, CA",
-    title: "180",
-    writer: "Umarji Anuradha, Jayendra, Aarthi Sriram, & Suba ",
-    director: "Jayendra",
-    release_year: "2011",
-    production_company: "SPI Cinemas",
-    actor_1: "Siddarth",
-    actor_2: "Nithya Menon",
-    actor_3: "Priya Anand"
-  })
-end
+ListScene.destroy_all
 
 1.times do
   new_user = User.create ({
@@ -35,11 +34,26 @@ end
   })
 
   3.times do
+    # new list
     new_list = List.new
     new_list.title = FFaker::HipsterIpsum.words(rand(1)+3).join(" ")
     new_list.description = FFaker::Lorem.phrase
     new_list.save
     new_user.lists.push new_list
+
+    3.times do
+      # new scene
+      new_scene = Scene.new
+      new_scene.locations = "Mason & California Streets, San Francisco, CA"
+      new_scene.title = FFaker::HipsterIpsum.words(rand(1)+1).join(" ")
+      new_scene.writer = FFaker::Name.last_name
+      new_scene.director = FFaker::Name.last_name
+      new_scene.release_year = "2011"
+      new_scene.production_company = "SPI Cinemas"
+      new_scene.actor_1 = "Brad Pitts"
+      new_scene.save
+      new_scene.lists.push(new_list)
+    end
   end
 end
 
@@ -58,6 +72,19 @@ end
     new_list.description = FFaker::Lorem.phrase
     new_list.save
     new_user.lists.push new_list
-  end
 
+    3.times do
+      # new scene
+      new_scene = Scene.new
+      new_scene.locations = "Mason & California Streets, San Francisco, CA"
+      new_scene.title = FFaker::HipsterIpsum.words(rand(1)+1).join(" ")
+      new_scene.writer = FFaker::Name.last_name
+      new_scene.director = FFaker::Name.last_name
+      new_scene.release_year = "2011"
+      new_scene.production_company = "SPI Cinemas"
+      new_scene.actor_1 = "Brad Pitts"
+      new_scene.save
+      new_scene.lists.push(new_list)
+    end
+  end
 end

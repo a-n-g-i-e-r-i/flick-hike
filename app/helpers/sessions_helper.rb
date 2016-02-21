@@ -9,6 +9,10 @@ module SessionsHelper
 		@current_user ||=User.find_by_id(session[:user_id])
 	end
 
+  def current_scene
+    @current_scene ||=Scene.find_by_id(params[:id])
+  end
+
 	def logged_in?
 		if current_user == nil
 			redirect_to new_session_path

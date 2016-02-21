@@ -4,6 +4,17 @@
   </div><br><hr>
   <p><%= @list.description %></p>
 </div><br><hr>
+<% if @list.scenes.size > 0 %>
+  <% @list.scenes.each do |scene| %>
+    <p>
+      <strong><%= link_to scene.title, scene_path(scene.id) %></strong><br>
+        <%= scene.locations%>
+        <%= scene.writer%>
+    </p>
+  <% end %>
+<% else %>
+  <h4>This list is empty</h4>
+<% end %>
 
 <% if current_user == @list.user %>
    <div>

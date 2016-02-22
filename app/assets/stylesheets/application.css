@@ -10,6 +10,235 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap-3.3.6.min
+ *= require bootstrap-multiselect
  *= require_tree .
  *= require_self
  */
+
+ .jumbotron {
+  background-repeat: no-repeat;
+  height: 350px;
+  max-width: 1920px;
+	background-size: cover;
+}
+
+.splash {
+  padding: 0px;
+  margin: 0px;
+}
+.splash_photo {
+  width: 100%;
+  max-height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box {
+  max-width: 350px;
+  max-height: 350px;
+}
+
+body {
+  padding-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+  color: #81abb4;
+}
+
+.city_show_title {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  top: -300px;
+  opacity: 0;
+}
+
+.city_show_title_static {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  top: -300px;
+}
+
+.city_show_title:hover {
+  opacity: .99;
+  text-decoration: none;
+
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+#notice {
+  margin: 50px;
+}
+
+.photo_title {
+  font-size: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+  transform: translatex(0%);
+}
+
+.title {
+  color: #2E2E2E;
+  text-transform: uppercase;
+}
+
+.article_title {
+  color: #2E2E2E;
+  font-weight: normal;
+}
+
+.accent-text {
+  color: #81abb4;
+  font-weight: bold;
+}
+
+.context-text {
+  color: #7F7777;
+}
+
+.center-content {
+  margin: 0 auto;
+}
+
+.profile_photo {
+	width: 280px;
+	height: 300px;
+}
+
+.form-horizontal {
+  width: 300px;
+}
+
+.control-label {
+  color: #81abb4;
+}
+
+.button {
+  float: left;
+  display: inline-block;
+}
+
+.btn {
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin: 10px 10px 0 0;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-special {
+    background: #81abb4;
+    color: #ffffff;
+}
+
+.btn-special:hover, .btn-special:focus, .btn-special:active, .btn-special.active, .open > .dropdown-toggle.btn-special {
+    background: #a9adae;
+    color: #ffffff;
+}
+
+.btn-special:active, .btn-special.active {
+    background: #a9adae;
+    box-shadow: none;
+}
+
+.btn-light {
+    background: #a9adae;
+    color: #ffffff;
+}
+
+.btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light.active, .open > .dropdown-toggle.btn-light {
+    background: #a9adae;
+    color: #ffffff;
+}
+
+.btn-light:active, .btn-light.active {
+    background: #D4D4D4;
+    box-shadow: none;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background: #fff none repeat scroll 0 0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.navbar-default {
+  border-radius: 0;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.navbar-brand-icon {
+  height: 20px;
+}
+
+.navbar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar-right {
+ padding-right: 30px;
+}
+
+.navbar-header {
+ padding-left: 30px;
+}
+
+@media (min-width: 760px) {
+
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background: #fff none repeat scroll 0 0;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+  }
+
+  .navbar .nav>li.dropdown.open>.dropdown-toggle, .navbar .nav>li.dropdown.active>.dropdown-toggle, .navbar .nav>li.dropdown.open.active>.dropdown-toggle {
+    background: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-left: 14px;
+    padding-right: 14px;
+    position: relative;
+    z-index: 9999
+  }
+
+  .navbar .nav>li>.dropdown-menu {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    /*left: -1px;*/
+    min-width: 200px;
+    margin: -1px 0 0;
+    z-index: 9991
+  }
+
+}

@@ -10,17 +10,22 @@
     </div>
 
     <% if current_user %>
-    <%= form_for @scene, :html => {:class => "form-horizontal center-block"} do |f| %>
+    <%= form_for @listscene, :html => {:class => "form-horizontal center-block"} do |f| %>
       <hr>
-      <div class="form-group">
-        <%= f.label "Add this scene to one of your lists using the dropdown menu below", class: "context-text" %>
-        <%= f.select( :id, @user_lists.collect { |a| [a.title, a.id] }, { :multiple => true}, {class: "form-control"}) -%>
-      </div>
-      <div class="form-group">
-        <%= f.submit "Add", class: "btn btn-special form-control" %>
-      </div>
+      <% if @user_lists.size > 0 %>
+        <div class="form-group">
+          <%= f.label "Add this scene to one or more of your lists using the menu below", class: "context-text" %>
+          <%= f.select( :list_id, @user_lists.collect { |a| [a.title, a.id] }, {:required => true}, {:multiple => true, class: "input-lg"}) -%>
+        </div>
+        <div class="form-group">
+          <%= f.hidden_field :scene_id, :value => params[:id] %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Add", class: "btn btn-special form-control" %>
+        </div>
+        <strong class="context-text">or</strong>
+      <% end %>
     <% end %>
-    <p class="context-text">or</p>
     <%= button_to "Add to New list", scene_new_list_path, :method => :get, class: 'btn btn-special' %>
     <% end %>
   </div>

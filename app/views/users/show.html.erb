@@ -1,7 +1,7 @@
 <div class="container" id="profile_info">
   <div class="col-lg-6 col-lg-offset-3 text-center">
     <div>
-     	<h1 class="title"><%= @user.username %></h1>
+     	<h1 class="title accent-text"><%= @user.username %></h1>
     </div>
     <div>
       <p><span class="context-text"><%= @user.description %></span></p>
@@ -13,7 +13,7 @@
         <%= link_to "edit profile", edit_user_path(@user.id), class: 'btn btn-light center-block' %>
       </div>
       <div class = "button text-center">
-        <%= button_to "remove profile", @user, method: :delete, data: {confirm: "Are you sure you want to delete your account?"}, class: 'btn btn-light center-block' %>
+        <%= button_to "remove account", @user, method: :delete, data: {confirm: "Are you sure you want to delete your account?"}, class: 'btn btn-light center-block' %>
       </div>
     </div>
     <% end %>
@@ -22,13 +22,14 @@
 
 <div class = "container">
   <div class="col-lg-6 col-lg-offset-3 text-center">
-    <h2 class="title">Lists</h2><hr>
+    <h2 class="title accent-text">Lists</h2><hr>
     <% if current_user == @user %>
-      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-purple' %>
+      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %><hr>
     <% end %>
     <% if @user.lists.size > 0 %>
       <% @user.lists.each do |list| %>
-        <h4><%= link_to list.title, list_path(list.id), class: 'title accent-text'%><br><br><%= list.created_at.strftime("%B %-d, %Y, at %l:%M%P") %></h4>
+        <h4><%= link_to list.title, list_path(list.id), class: 'title accent-text'%></h4>
+        <p class="context-text"><%= list.created_at.strftime("%B %-d, %Y, at %l:%M%P") %><p>
         <% if current_user == list.user %>
         </br>
         <% end %>

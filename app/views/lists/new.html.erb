@@ -1,6 +1,14 @@
 <%= form_for @list, :html => {:class => "form-horizontal center-block"} do |f| %>
-  <h1 class="form-group text-color title">Curate List</h1>
-  <p>Adding <span class="title"><%= current_scene[:title] %></span> to new list</p>
+  <h1 class="form-group text-color title accent-text">Curate List</h1>
+  <% if current_scene %>
+  <div class="form-group">
+    <%= f.hidden_field "scene_id", :value => current_scene[:id] %>
+  </div>
+  <div class="form-group">
+    <%= check_box("scene", current_scene[:id], id: current_scene[:id], checked: true, value: current_scene[:id]) %>
+    <%= label current_scene[:id], "add the scene #{current_scene[:title]} to list"%>
+  </div>
+  <% end %>
   <div class="form-group">
     <%= f.label :title, "title", class: " control-label" %>
     <%= f.text_field :title, :required => true, class: "form-control" %>
@@ -10,6 +18,6 @@
     <%= f.text_area :description, :required => true, size: "60x15", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.submit "Curate", class: "btn btn-default btn-purple center-bl form-control" %>
+    <%= f.submit "Curate", class: "btn btn-special center-bl form-control" %>
   </div>
 <% end %>

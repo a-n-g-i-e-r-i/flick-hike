@@ -1,10 +1,10 @@
-<h1>Scenes</h1>
+<h1 class="title accent-text">Scenes</h1>
 <% if current_user %>
-  <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-purple' %>
+  <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %>
 <% end %>
 <% @scenes.each do |scene| %>
   <p>
-    <strong><%= link_to scene.title, scene_path(scene.id) %></strong><br>
+    <strong><%= link_to scene.title, scene_path(scene.id), class: "accent-text" %></strong><br>
       <%= scene.release_year%>
       <%= scene.director%>
       <%= scene.writer%>

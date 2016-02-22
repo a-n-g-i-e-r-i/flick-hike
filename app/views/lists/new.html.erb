@@ -2,11 +2,9 @@
   <h1 class="form-group text-color title accent-text">Curate List</h1>
   <% if current_scene %>
   <div class="form-group">
-    <%= f.hidden_field "scene_id", :value => current_scene[:id] %>
-  </div>
-  <div class="form-group">
-    <%= check_box("scene", current_scene[:id], id: current_scene[:id], checked: true, value: current_scene[:id]) %>
-    <%= label current_scene[:id], "add the scene #{current_scene[:title]} to list"%>
+    <%= f.hidden_field :scene_id, :value => params[:id] %>
+    <%= f.label "Add Scene?" %>
+    <%= f.check_box :add_scene, checked: true %>
   </div>
   <% end %>
   <div class="form-group">

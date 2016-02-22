@@ -14,13 +14,13 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
     # assign user to @list
     @list.user = current_user
-    # if checkbox is true, add scene to list
-    #assign scene id to variable
-    # @scene_id = params[:list][:scene_id]
     # select scene by scene id
-    @scene = Scene.find_by_id(params[:list][:scene_id])
-    # assign scene to @list
-    @list.scenes << @scene
+    @scene = Scene.find_by_id(params[:scene_id])
+    # if checkbox is true, add scene to list
+    if @scene
+      # assign scene to @list
+      @list.scenes << @scene
+    end
     if @list.save
       flash[:notice] = "Successfully created list."
       redirect_to list_path(@list)
@@ -42,6 +42,7 @@ class ListsController < ApplicationController
   end
 
   def update
+    @scene = Scene.find_by_id(params[:list][:scene_id])
     @list = List.find_by_id(params[:id])
     if current_user == @list.user
       if @list.update_attributes(list_params)

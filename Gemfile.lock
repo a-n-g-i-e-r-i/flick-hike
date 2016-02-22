@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/ai/jquery-cdn.git
+  revision: 6a66ecf73be19a8677870347bf1e1a230be4074d
+  specs:
+    jquery-cdn (2.2.0)
+      sprockets (>= 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,6 +47,8 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-multiselect-rails (0.9.9)
+      rails (>= 4.0.0)
     builder (3.2.2)
     byebug (8.2.2)
     coffee-rails (4.1.1)
@@ -145,10 +154,12 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  bootstrap-multiselect-rails (~> 0.9.9)
   byebug
   coffee-rails (~> 4.1.0)
   ffaker
   jbuilder (~> 2.0)
+  jquery-cdn!
   jquery-rails
   pg (~> 0.15)
   rails (= 4.2.5.1)

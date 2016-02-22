@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+#User jquery in layout
+gem 'jquery-cdn', github: 'ai/jquery-cdn'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -28,6 +30,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use FFaker for seed data
 gem 'ffaker'
+
+# For dropdown creation of resources
+gem 'bootstrap-multiselect-rails', '~> 0.9.9'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

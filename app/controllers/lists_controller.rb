@@ -12,15 +12,19 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    current_user.lists << @list
-    current_scene.lists << @list
-    # @list.scenes.push(current_scene)
+    #finding scene by scene id
+    @scene_id = params[:list][:scene_id]
+    #why is @scene nil?
+    @scene = Scene.find_by_id(@scene_id)
+    #assign user and scenes of list
+    @list.user = current_user
+    @list.scenes.push(@scene)
     if @list.save
       flash[:notice] = "Successfully created list."
       redirect_to list_path(@list)
     else
       flash[:error] = @list.errors.full_messages.join(", ")
-      redirect_to new_list_path
+      redirect_to(:back)
     end
   end
 

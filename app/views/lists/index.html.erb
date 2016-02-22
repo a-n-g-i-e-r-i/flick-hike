@@ -1,10 +1,10 @@
-<h1>Lists</h1>
+<h1 class="title accent-text">Lists</h1>
 <% if current_user %>
-  <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-purple' %>
+  <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %>
 <% end %>
 <% @lists.each do |list| %>
   <p>
-    <strong><%= link_to list.title, list_path(list.id) %></strong><br>
+    <strong><%= link_to list.title, list_path(list.id), class: "accent-text" %></strong><br>
       <%= list.description%>
   </p>
 <% end %>

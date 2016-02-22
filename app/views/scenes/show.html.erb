@@ -1,29 +1,40 @@
 <div class="container" id="scene_info">
   <div class="col-lg-6 col-lg-offset-3 text-center">
     <div>
-     	<h1 class="title">Scene From the Film <%= @scene.title %></h1>
+      <%= button_to "discover more scenes", scenes_path, :method => :get, class: 'btn btn-special' %>
+     	<h3 class="context-text">Scene From the Film</h3>
+      <h2 class="title accent-text"><%= @scene.title %></h2>
     </div>
     <div>
-      <p><span class="context-text"><%= @scene.locations %></span></p>
-      <%= button_to "add scene to list", scene_new_list_path, :method => :get, class: 'btn btn-purple' %>
-      <%= button_to "back to scenes", scenes_path, :method => :get, class: 'btn btn-purple' %>
+      <p class="context-text">filmed on location at <span class="accent-text"><%= @scene.locations %></span></p>
     </div>
+
+    <% if current_user %>
+    <%= form_for @scene, :html => {:class => "form-horizontal center-block"} do |f| %>
+      <hr>
+      <div class="form-group">
+        <%= f.label "Add this scene to one of your lists using the dropdown menu below", class: "context-text" %>
+        <%= f.select( :id, @user_lists.collect { |a| [a.title, a.id] }, { :multiple => true}, {class: "form-control"}) -%>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Add", class: "btn btn-special form-control" %>
+      </div>
+    <% end %>
+    <p class="context-text">or</p>
+    <%= button_to "Add to New list", scene_new_list_path, :method => :get, class: 'btn btn-special' %>
+    <% end %>
   </div>
-</div>
+</div><hr>
 
 <div class = "container">
   <div class="col-lg-6 col-lg-offset-3 text-center">
-    <h2 class="title">List Appearances</h2><hr>
+    <h2 class="title accent-text">List Appearances</h2><hr>
     <% if @scene.lists.size > 0 %>
       <% @scene.lists.each do |list| %>
-        <p>
-          <strong><%= link_to list.title, list_path(list.id) %></strong><br>
-          <p><span><%= list.description%></span></p>
-
-          <div class="button"><p><span class="context-text">curator</span> <span class="accent-text"><%=link_to "#{list.user.username}", user_path(list.user.id), class: "accent-text" %></span></p>
-          </div><br><hr>
-
-        </p>
+          <h4><%= link_to list.title, list_path(list.id), class: "accent-text" %></h4>
+          <p class="context-text">curator <span class="accent-text"><%=link_to "#{list.user.username}", user_path(list.user.id), class: "accent-text" %></span></p>
+          <p class="context-text"><%= list.description%></p>
+          <hr>
       <% end %>
     <% else %>
       <h4>This Scene has not been curated in any lists yet</h4>

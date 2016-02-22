@@ -12,13 +12,15 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    #finding scene by scene id
-    @scene_id = params[:list][:scene_id]
-    #why is @scene nil?
-    @scene = Scene.find_by_id(@scene_id)
-    #assign user and scenes of list
+    # assign user to @list
     @list.user = current_user
-    @list.scenes.push(@scene)
+    # if checkbox is true, add scene to list
+    #assign scene id to variable
+    # @scene_id = params[:list][:scene_id]
+    # select scene by scene id
+    @scene = Scene.find_by_id(params[:list][:scene_id])
+    # assign scene to @list
+    @list.scenes << @scene
     if @list.save
       flash[:notice] = "Successfully created list."
       redirect_to list_path(@list)

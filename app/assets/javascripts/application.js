@@ -107,7 +107,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, pos) {
   directionsService.route({
     origin: pos,
     destination: pos,
-    // destination: document.getElementById('end').value,
     waypoints: waypts,
     optimizeWaypoints: true,
     travelMode: google.maps.TravelMode.WALKING
@@ -117,15 +116,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, pos) {
       var route = response.routes[0];
       var summaryPanel = document.getElementById('directions-panel');
       summaryPanel.innerHTML = '';
-      // For each route, display summary information.
-      // for (var i = 0; i < route.legs.length; i++) {
-      //   var routeSegment = i + 1;
-      //   summaryPanel.innerHTML += '<p class="accent-text">Flick Hike Leg ' + routeSegment +
-      //       '</p>';
-      //   summaryPanel.innerHTML += '<span class="context-text">start </span><span>' + route.legs[i].start_address + '</span><br>';
-      //   summaryPanel.innerHTML += '<span class="context-text">end </span><span>' + route.legs[i].end_address + '</span><br>';
-      //   summaryPanel.innerHTML += '<span class="context-text">distance </span><span>' + route.legs[i].distance.text + '</span><hr>';
-      // }
     } else {
       window.alert('Directions request failed due to ' + status);
     }

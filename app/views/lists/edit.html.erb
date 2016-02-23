@@ -7,7 +7,20 @@
   <div class="form-group">
     <%= f.label :description, "description", class: " control-label" %>
     <%= f.text_area :description, :required => true, size: "60x15", class: "form-control" %>
-  </div>
+  </div><hr>
+  <% if @list.scenes.size > 0 %>
+    <strong class="context-text">check the scenes in the menu below to remove them from your <%= @list.title %> list</strong><hr>
+    <% @list.scenes.each do |scene| %>
+    <div class="form-group">
+      <%= check_box_tag "scene_id[]", scene.id %>
+      <%= f.label "check to remove #{scene.title} scene from list" %>
+    </div><hr>
+    <% end %>
+  <% else %>
+    <div class="form-group">
+      <h4>This list could use some curation</h4>
+    </div><hr>
+  <% end %>
   <div class="form-group">
     <%= f.submit "Save", class: "btn btn-special center-bl form-control" %>
   </div>

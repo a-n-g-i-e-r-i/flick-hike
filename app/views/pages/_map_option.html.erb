@@ -1,0 +1,41 @@
+<div class="container center-content" id="map-panel">
+  <div class="row col-md-12 center-content">
+    <h1 class="text-center title accent-text"><strong>Map</strong></h1>
+    <h4 class="text-center">Select a curated list to view a curated hike through memorable film scenes in San Francisco.</h4>
+    <div class="col-md-6 center-block">
+      <div class="center-block map" id="map"></div>
+    </div>
+    <div class="col-md-6 center-block">
+      <form class="form-horizontal map center-block">
+        <fieldset class="form-group">
+          <label class=accent-text >Start</label>
+          <input class="form-control" id="start" placeholder="starting address">
+        </fieldset>
+        <fieldset class="form-group center-content">
+          <label class=accent-text >Scenes</label>
+          <i>(Ctrl-Click up to eight selections)</i> <br>
+          <select multiple id="waypoints" class="input-lg">
+            <option value="City and County of San Francisco City Hall, United States, 1 Doctor Carlton B Goodlett Place, San Francisco, CA 94102">San Francisco City Hall</option>
+            <option value="EPIC Steak, 369 The Embarcadero, San Francisco, CA 94105">EPIC Steak</option>
+            <option value="City and County of San Francisco City Hall, United States, 1 Doctor Carlton B Goodlett Place, San Francisco, CA 94102">City and County of San Francisco City Hall</option>
+            <option value="Masons Grand Lodge of California, 1111 California Street, San Francisco, CA 94108">Masons Grand Lodge</option>
+            <option value="800 Larkin, 800 Larkin Street, San Francisco, CA 94109">800 Larkin</option>
+            <option value="The Randall Museum, 199 Museum Way, San Francisco, CA 94114">The Randall Museum</option>
+            <option value="555 Market St, San Francisco, CA 94105">555 Market St</option>
+            <option value="200 Market St, San Francisco, CA 94111">200 Market St</option>
+            <option value="Justin Herman Plaza, San Francisco Bay Trail, San Francisco, CA 94105">Justin Herman Plaza</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group">
+          <label class=accent-text >End</label>
+          <input class="form-control" id="end" placeholder="ending address">
+        </fieldset>
+        <fieldset class="form-group">
+          <button type="button" class="btn btn-special" id="submit">Map List</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="directions-panel"></div>
+</div>

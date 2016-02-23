@@ -28,3 +28,28 @@
     </div>
   </div>
 <% end %>
+<div class="container center-content" id="map-panel">
+  <div class="row col-md-12 center-content">
+    <h1 class="text-center title accent-text"><strong>List Hike</strong></h1>
+    <h4 class="text-center">Select from the list of scenes and generate a Flick Hike around San Francisco</h4>
+    <h5 class="text-center context-text">We will use your current location as the start of the loop unless you specifcy otherwise</h5><br>
+    <div class="col-md-6 center-block">
+      <div class="center-block map" id="map"></div>
+    </div>
+    <div class="col-md-6 center-block">
+      <form class="col-md-12 form-horizontal map-selection center-block">
+        <div class="form-group center-content">
+          <label class=accent-text >Hike Scenes</label>
+          <i class="context-text">(Ctrl-Click up to eight selections)</i><br>
+          <select multiple id="waypoints" class="input-lg">
+            <%= options_from_collection_for_select(@list.scenes, :locations, :locations) -%>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-special" id="submit">Map List</button>
+        </div>
+      </form>
+      <div class="col-md-12 center-block" id="right-panel"></div>
+    </div>
+  </div>
+</div>

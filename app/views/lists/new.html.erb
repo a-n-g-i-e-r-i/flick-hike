@@ -2,11 +2,10 @@
   <h1 class="form-group text-color title accent-text">Curate List</h1>
   <% if current_scene %>
   <div class="form-group">
-    <input type="checkbox" name="scene_id" value=<%= params[:id] %> checked >
+    <%= check_box_tag "scene_id", params[:id], checked: "true" %>
     <%= f.label "Add Scene to list" %>
   </div>
   <% end %>
-  <%= params.inspect %>
   <div class="form-group">
     <%= f.label :title, "title", class: " control-label" %>
     <%= f.text_field :title, :required => true, class: "form-control" %>

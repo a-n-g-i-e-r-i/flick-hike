@@ -25,6 +25,21 @@ List.destroy_all
 Scene.destroy_all
 ListScene.destroy_all
 
+json = ActiveSupport::JSON.decode(File.read('db/seeds/trial.json'))
+
+json.each do |a|
+  new_scene = Scene.new
+  locations = a['locations']
+  new_scene.locations = a['locations']
+  new_scene.title = a['title']
+  new_scene.writer = a['writer']
+  new_scene.director = a['director']
+  new_scene.release_year = a['release_year']
+  new_scene.production_company = a['production_company']
+  new_scene.actor_1 = a['actor_1']
+  new_scene.save
+end
+
 1.times do
   new_user = User.create ({
     username: "bagel",

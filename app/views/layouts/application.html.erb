@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlickHike</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwr64FZQ5ZTImLSjt5QHVKGyN4-teUNKk&signed_in=false&callback=initMap"async defer></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,52 +14,63 @@
 <body>
 
 <div id="notice" class="accent-text"><%= notice %></div>
-<% flash.each do |name, msg| %>
-  <div id="notice" class="accent-text">
-    <small> <%= name.capitalize %>: <%= msg %> </small>
-  </div>
-<% end %>
 
-<div class="container" id="center-content">
+  <div class="container" id="center-content">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <div>
+          <img class="navbar-brand-icon" src = "/assets/navbar-brand-icon.png">
+        </div> -->
+        <a class="navbar-brand" href="/">Flick Hike</a>
+      </div>
+      <div class="collapse navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Scenes", scenes_path %></li>
+          <li><%= link_to "Lists", lists_path %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
+            <li><%= link_to "Log Out", destroy_session_path %></li>
+          <% else %>
+            <li><%= link_to "Signup", new_user_path %></li>
+            <li><%= link_to "Log In", new_session_path %></li>
+          <% end %>
+          <li><%= link_to "About", about_path %></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- <div>
-        <img class="navbar-brand-icon" src = "/assets/navbar-brand-icon.png">
-      </div> -->
-      <a class="navbar-brand" href="/">Flick Hike</a>
+  <% flash.each do |name, msg| %>
+    <div id="notice" class="accent-text">
+      <small> <%= name.capitalize %>: <%= msg %> </small>
     </div>
-    <div class="collapse navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Scenes", scenes_path %></li>
-        <li><%= link_to "Lists", lists_path %></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
-          <li><%= link_to "Profile", user_path(current_user) %></li>
-          <li><%= link_to "Log Out", destroy_session_path %></li>
-        <% else %>
-          <li><%= link_to "Signup", new_user_path %></li>
-          <li><%= link_to "Log In", new_session_path %></li>
-        <% end %>
-        <li><%= link_to "About", about_path %></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </nav>
+  <% end %>
 
 <%= yield %>
 
-</div>
+  </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <footer class="footer">
+		<div class="container">
+			<span class="context-text">
+				Flick Hike 2016
+			</span>
+			<span class="context-text">
+				<%= link_to "About Us", about_path, class: "accent-text" %>
+			</span>
+		</div>
+	</footer>
 
 </body>
 </html>

@@ -29,8 +29,13 @@ json = ActiveSupport::JSON.decode(File.read('db/seeds/trial.json'))
 
 json.each do |a|
   new_scene = Scene.new
-  locations = a['locations']
-  new_scene.locations = a['locations']
+  @locations = a['locations']
+  if @locations == nil
+    @locations = 'San Francisco, CA'
+  else
+    @locations = @locations + ', San Francisco, CA'
+  end
+  new_scene.locations = @locations
   new_scene.title = a['title']
   new_scene.writer = a['writer']
   new_scene.director = a['director']

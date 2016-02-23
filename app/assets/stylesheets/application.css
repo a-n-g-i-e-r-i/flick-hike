@@ -16,11 +16,34 @@
  *= require_self
  */
 
- .jumbotron {
+.jumbotron {
   background-repeat: no-repeat;
   height: 350px;
   max-width: 1920px;
 	background-size: cover;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+  position: fixed;
+}
+
+
+#right-panel {
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#right-panel {
+  height: 100%;
+  width: 100%;
+}
+
+.map-selection {
+  background-repeat: no-repeat;
+  margin: 15px;
+  width: 100%;
 }
 
 .splash {
@@ -41,11 +64,20 @@
 
 body {
   padding-top: 50px;
+  min-width: 300px;
+}
+
+footer {
+  margin-top: 50px;
 }
 
 ul {
   list-style-type: none;
   color: #81abb4;
+}
+
+ul {
+  margin-bottom: 50px;
 }
 
 .city_show_title {

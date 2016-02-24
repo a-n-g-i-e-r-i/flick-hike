@@ -24,42 +24,53 @@
 }
 
 #map {
-  height: 300px;
+  min-width: 200px;
+  min-height: 200px;
+  max-height: 300px;
   width: 100%;
   position: fixed;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
 }
 
+.map-panel {
+  min-width: 200px;
+  min-height: 200px;
+  max-height: 300px;
+  width: 100%;
+  padding: 15px 5px 15px 5px;
+  border: solid #81abb4 2px;
+  border-radius: 15px;
+  overflow: scroll;
+}
+
+.map-panel::-webkit-scrollbar {
+  display: none;
+}
 
 #right-panel {
   line-height: 30px;
-  padding-left: 10px;
-}
-
-#right-panel {
+  margin-bottom: 15px;
+  margin-right: 15px;
   height: 100%;
   width: 100%;
 }
 
-.map-selection {
-  background-repeat: no-repeat;
+#waypoints {
+  max-width: 100%;
+  min-width: 200px;
+}
+
+.container {
   margin: 15px;
-  width: 100%;
 }
 
-.splash {
-  padding: 0px;
-  margin: 0px;
+.gmnoprint {
+    display:none;
 }
-.splash_photo {
-  width: 100%;
-  max-height: 350px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.box {
-  max-width: 350px;
-  max-height: 350px;
+.gmnoprint {
+    background:none !important;
 }
 
 body {
@@ -69,6 +80,7 @@ body {
 
 footer {
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 ul {
@@ -78,29 +90,6 @@ ul {
 
 ul {
   margin-bottom: 50px;
-}
-
-.city_show_title {
-  font-size: 50px;
-  text-transform: uppercase;
-  color: #fff;
-  position: relative;
-  top: -300px;
-  opacity: 0;
-}
-
-.city_show_title_static {
-  font-size: 50px;
-  text-transform: uppercase;
-  color: #fff;
-  position: relative;
-  top: -300px;
-}
-
-.city_show_title:hover {
-  opacity: .99;
-  text-decoration: none;
-
 }
 
 a:-webkit-any-link {
@@ -125,11 +114,6 @@ a:-webkit-any-link {
 .title {
   color: #2E2E2E;
   text-transform: uppercase;
-}
-
-.article_title {
-  color: #2E2E2E;
-  font-weight: normal;
 }
 
 .accent-text {
@@ -168,7 +152,7 @@ a:-webkit-any-link {
     font-weight: 700;
     letter-spacing: 8px;
     text-transform: uppercase;
-    margin: 10px 10px 0 0;
+    margin: 15px;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -238,6 +222,16 @@ a:-webkit-any-link {
 }
 
 @media (min-width: 760px) {
+
+  #map {
+    height: 300px;
+    width: 100%;
+  }
+
+  .map-panel {
+    height: 300px;
+    width: 100%;
+  }
 
   .navbar-default .navbar-nav > .open > a,
   .navbar-default .navbar-nav > .open > a:hover,

@@ -16,11 +16,20 @@
  *= require_self
  */
 
-.jumbotron {
-  background-repeat: no-repeat;
-  height: 350px;
-  max-width: 1920px;
+.jumbo {
+  background-image: url("http://45.media.tumblr.com/a2caa031e456ed5d99e0d8a71ac83826/tumblr_mpuq8z9pWW1qc2bleo1_500.gif");
+  height: 500px;
 	background-size: cover;
+  overflow: hidden;
+}
+
+.jumbotron {
+    position: relative;
+    background: #000 url("jumbotron-bg.png") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
 }
 
 #map {

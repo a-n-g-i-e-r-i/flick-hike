@@ -47,12 +47,6 @@
       </div><!-- /.navbar-collapse -->
     </nav>
 
-  <% flash.each do |name, msg| %>
-    <div id="notice" class="accent-text">
-      <small> <%= name.capitalize %>: <%= msg %> </small>
-    </div>
-  <% end %>
-
 <%= yield %>
 
   </div>

@@ -1,47 +1,45 @@
-<h3 class="title accent-text"><%= @list.title %></h3>
-<div>
-  <div class="button"><p><span class="context-text">curator</span> <span class="accent-text"><%=link_to "#{@list.user.username}", user_path(@list.user.id), class: "accent-text" %></span></p>
-  </div><br><hr>
-  <p><%= @list.description %></p>
-</div><br><hr>
-<div class="col-lg-6 col-lg-offset-3 text-center">
-  <h2 class="title accent-text">Scenes</h2><hr>
+<div class="container col-md-12 text-center">
+  <h1 class="title accent-text"><%= @list.title %></h1>
+  <h4 class="context-text">curator</span> <span class="accent-text"><%=link_to "#{@list.user.username}", user_path(@list.user.id), class: "accent-text" %></h4>
+  <h5><%= @list.description %></h5>
+  <% if current_user == @list.user %>
+  <div class="row col-md-12 center-content">
+    <div class="col-md-6">
+      <%= link_to "Edit", edit_list_path(@list.id), class: 'btn btn-special' %>
+    </div>
+    <div class="col-md-6">
+      <%= button_to "Delete", list_path(@list),
+   { method: :delete, data: { confirm: "Are you sure you want to delete '#{@list.title}'?"}, class: 'btn btn-special' } %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<br>
+<div class="container col-md-12 text-center"><hr>
+  <h2 class="title accent-text">Scenes</h2>
   <% if @list.scenes.size > 0 %>
     <% @list.scenes.each do |scene| %>
       <h4><%= link_to scene.title, scene_path(scene.id), class: "accent-text" %></h4>
-      <p class="context-text"><%= scene.locations%><p>
-      </p><hr>
+      <p class="context-text"><%= scene.locations%><p><hr>
     <% end %>
   <% else %>
     <h4>This list could use some curation</h4>
   <% end %>
 </div>
-
-<% if current_user == @list.user %>
-   <div>
-    <div class = "button">
-      <%= link_to "Edit", edit_list_path(@list.id), class: 'btn btn-special' %>
-    </div>
-    <div class = "button">
-      <%= button_to "Delete", list_path(@list),
-   { method: :delete, data: { confirm: "Are you sure you want to delete '#{@list.title}'?"}, class: 'btn btn-special' } %>
-    </div>
-  </div>
-<% end %>
-<div class="container center-content" id="map-panel">
+<div class="container center-content" id="hike-panel">
   <div class="row col-md-12 center-content">
     <h1 class="text-center title accent-text"><strong>List Hike</strong></h1>
     <h4 class="text-center">Select from the list of scenes and generate a Flick Hike around San Francisco</h4>
     <h5 class="text-center context-text">We will use your current location as the start of the loop unless you specifcy otherwise</h5><br>
-    <div class="col-md-6 center-block">
-      <div class="center-block map" id="map"></div>
-    </div>
-    <div class="col-md-6 center-block">
-      <form class="col-md-12 form-horizontal map-selection center-block">
-        <div class="form-group center-content">
+    <div class="col-md-6 center-blockmap" id="map"></div>
+    <div class="col-md-6 center-block map-panel">
+      <form class="col-md-12 map-selection">
+        <div class="form-group">
           <label class=accent-text >Hike Scenes</label>
           <i class="context-text">(Ctrl-Click up to eight selections)</i><br>
-          <select multiple id="waypoints" class="input-lg">
+        </div>
+        <div class="form-group">
+          <select multiple id="waypoints" class="input-lg pull-left">
             <%= options_from_collection_for_select(@list.scenes, :locations, :locations) -%>
           </select>
         </div>

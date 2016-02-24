@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
+  get 'scenes/autocomplete_scene_film_title'
+  get 'lists/autocomplete_list_title'
+
   resources :users, :lists
 
   get "/signup", to: "users#new", as: "signup"

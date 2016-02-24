@@ -8,9 +8,5 @@ class Scene < ActiveRecord::Base
   # sort rows for render
   default_scope {order("title ASC") }
 
-  # search function for index method
-  def self.search(search)
-    #########################3
-    where("film_title ILIKE ?", "%#{search}%")
-  end
+  scope :film_title_like, -> (film_title) { where("film_title ilike ?", film_title)}
 end

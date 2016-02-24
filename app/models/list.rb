@@ -7,4 +7,6 @@ class List < ActiveRecord::Base
   accepts_nested_attributes_for :list_scenes, :scenes
 
   default_scope {order("title ASC") }
+
+  scope :title_like, -> (title) { where("title ilike ?", title)}
 end

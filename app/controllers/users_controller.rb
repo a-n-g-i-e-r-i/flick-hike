@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in?, only: [ :edit, :update, :destroy]
-    before_action :logged_out?, only: [:new, :create]
+  before_action :logged_out?, only: [:new, :create]
 
   def index
     @users = User.all
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
-      flash[:notice] = "#{@user}, you successfully created an account"
+      flash[:notice] = "#{@user.username}, you successfully created an account"
       login(@user)
       redirect_to user_path(@user)
     else

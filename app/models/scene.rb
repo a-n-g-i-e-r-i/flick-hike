@@ -5,4 +5,5 @@ class Scene < ActiveRecord::Base
 
   accepts_nested_attributes_for :list_scenes, :lists
 
+  default_scope {order("title ASC") }
 end

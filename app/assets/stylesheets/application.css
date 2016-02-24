@@ -21,16 +21,11 @@
   height: 500px;
 	background-size: cover;
   overflow: hidden;
+  background-repeat: no-repeat;
+  width: 200%;
+  border-radius: 0px;
 }
 
-.jumbotron {
-  position: relative;
-  background: #000 url("jumbotron-bg.png") center center;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  overflow: hidden;
-}
 
 #map {
   min-width: 200px;
@@ -49,7 +44,7 @@
   max-height: 300px;
   width: 100%;
   padding: 15px 5px 15px 5px;
-  border: solid #81abb4 2px;
+  border: solid #131367 2px;
   border-radius: 15px;
   overflow-y: scroll;
 }
@@ -57,10 +52,10 @@
 .index-panel {
   min-width: 200px;
   min-height: 200px;
-  max-height: 450px;
+  max-height: 425px;
   width: 100%;
   padding: 15px 5px 15px 5px;
-  border: solid #81abb4 2px;
+  border: solid #131367 2px;
   border-radius: 15px;
   overflow-y: scroll;
 }
@@ -114,7 +109,7 @@ footer {
 
 ul {
   list-style-type: none;
-  color: #81abb4;
+  color: #131367;
 }
 
 ul {
@@ -150,7 +145,7 @@ a:-webkit-any-link {
 }
 
 .accent-text {
-  color: #81abb4;
+  color: #131367;
   font-weight: bold;
 }
 
@@ -172,7 +167,7 @@ a:-webkit-any-link {
 }
 
 .control-label {
-  color: #81abb4;
+  color: #131367;
 }
 
 .button {
@@ -185,7 +180,7 @@ a:-webkit-any-link {
     font-weight: 700;
     letter-spacing: 8px;
     text-transform: uppercase;
-    margin: 15px;
+    margin: 15px 0 15px 0;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -193,7 +188,7 @@ a:-webkit-any-link {
 }
 
 .btn-special {
-    background: #81abb4;
+    background: #131367;
     color: #ffffff;
 }
 
@@ -267,7 +262,7 @@ a:-webkit-any-link {
   }
 
   .index-panel {
-    height: 450px;
+    height: 425px;
     width: 100%;
   }
 

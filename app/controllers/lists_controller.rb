@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
 
+  autocomplete :list, :title
   before_action :logged_in?, only: [:new, :create, :edit, :update, :destroy]
 
   def index

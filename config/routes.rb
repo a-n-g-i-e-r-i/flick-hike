@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'scenes/autocomplete_scene_film_title'
   get 'lists/autocomplete_list_title'
 
-  resources :users, :lists
+  resources :users, :except => [:index]
+  resources :lists
 
   get "/signup", to: "users#new", as: "signup"
 

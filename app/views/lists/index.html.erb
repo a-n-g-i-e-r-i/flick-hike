@@ -1,10 +1,22 @@
-<h1 class="title accent-text">Lists</h1>
-<% if current_user %>
-  <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %>
-<% end %>
-<% @lists.each do |list| %>
-  <p>
-    <strong><%= link_to list.title, list_path(list.id), class: "accent-text" %></strong><br>
-      <%= list.description%>
-  </p>
-<% end %>
+<div class="container center-content">
+  <div class="row col-md-12 center-content">
+    <div class="col-md-12 center-block">
+      <h1 class="title accent-text">Lists</h1>
+    </div>
+    <% if current_user %>
+      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %>
+    <% end %>
+    <div class="col-md-12 center-block">
+      <div class="index col-md-12 index-panel">
+        <% @lists.each do |list| %>
+        <div class="col-md-12 index">
+          <h5 class="accent-text"><%= link_to list.title, list_path(list.id), class: "accent-text title" %></h5>
+          <p><span class="context-text"> curator </span><span class="accent-text"><%=link_to "#{list.user.username}", user_path(list.user.id), class: "accent-text" %></span></p>
+          <p><span class="context-text"><%= list.description%></span></p>
+          <div class="col-md-6 center-block"><hr></div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,17 +1,21 @@
-<h1 class="title accent-text">Scenes</h1>
-<% if current_user %>
-  <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %>
-<% end %>
-<% @scenes.each do |scene| %>
-  <p>
-    <strong><%= link_to scene.title, scene_path(scene.id), class: "accent-text" %></strong><br>
-      <%= scene.release_year%>
-      <%= scene.director%>
-      <%= scene.writer%>
-      <%= scene.locations%>
-      <%= scene.actor_1%>
-      <%= scene.actor_2%>
-      <%= scene.actor_3%>
-      <%= scene.production_company%>
-  </p>
-<% end %>
+<div class="container center-content">
+  <div class="row col-md-12 center-content">
+    <div class="col-md-12 center-block">
+      <h1 class="title accent-text">Scenes</h1>
+    </div>
+    <% if current_user %>
+      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %>
+    <% end %>
+    <div class="col-md-12 center-block">
+      <div class="index col-md-12 index-panel">
+        <% @scenes.each do |scene| %>
+        <div class="col-md-12 index">
+          <h5 class="accent-text"><%= link_to scene.title, scene_path(scene.id), class: "accent-text title" %></h5>
+          <p><span class="context-text"> directed by </span><span class="accent-text"><%= scene.director%></span><span class="context-text"> | released in </span><span class="accent-text"><%= scene.release_year%></span><span class="context-text"> | scene starring <span class="accent-text"><%= scene.actor_1%></span></p>
+          <div class="col-md-6 center-block"><hr></div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

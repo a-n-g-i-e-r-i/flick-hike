@@ -1,3 +1,22 @@
+<%= form_tag(scenes_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+<%= submit_tag "Search" %>
+<% end %>
+<% if @scenes.present? %>
+
+  <% @scenes.each do |scene| %>
+  <div class="col-md-12 index">
+    <h5 class="accent-text"><%= link_to scene.title, scene_path(scene.id), class: "accent-text title" %></h5>
+    <p><span class="context-text"> directed by </span><span class="accent-text"><%= scene.director%></span><span class="context-text"> | released in </span><span class="accent-text"><%= scene.release_year%></span><span class="context-text"> | scene starring <span class="accent-text"><%= scene.actor_1%></span></p>
+    <div class="col-md-6 center-block"><hr></div>
+  </div>
+  <% end %>
+<% else %>
+  <p>There are no scenes containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+
+####################################3
+
 <div class="container center-content">
   <div class="row col-md-12 center-content">
     <div class="col-md-12 center-block">

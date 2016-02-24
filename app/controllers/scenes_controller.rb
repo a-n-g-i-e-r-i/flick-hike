@@ -2,6 +2,11 @@ class ScenesController < ApplicationController
 
   def index
     @scenes = Scene.all
+    if params[:search]
+    @scenes = Scene.search(params[:search]).order("created_at DESC")
+  else
+    @scenes = Scene.all.order('created_at DESC')
+  end
   end
 
   def show

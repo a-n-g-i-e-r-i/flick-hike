@@ -1,40 +1,49 @@
-<%= form_tag(scenes_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-<%= submit_tag "Search" %>
-<% end %>
-<% if @scenes.present? %>
-
-  <% @scenes.each do |scene| %>
-  <div class="col-md-12 index">
-    <h5 class="accent-text"><%= link_to scene.title, scene_path(scene.id), class: "accent-text title" %></h5>
-    <p><span class="context-text"> directed by </span><span class="accent-text"><%= scene.director%></span><span class="context-text"> | released in </span><span class="accent-text"><%= scene.release_year%></span><span class="context-text"> | scene starring <span class="accent-text"><%= scene.actor_1%></span></p>
-    <div class="col-md-6 center-block"><hr></div>
-  </div>
-  <% end %>
-<% else %>
-  <p>There are no scenes containing the term(s) <%= params[:search] %>.</p>
-<% end %>
-
-####################################3
+<script type="text/javascript" charset="utf-8">
+  $('#search').bind('railsAutocomplete.select', function (event, data) {
+    $('#search-form').submit()
+  });
+</script>
 
 <div class="container center-content">
   <div class="row col-md-12 center-content">
     <div class="col-md-12 center-block">
       <h1 class="title accent-text">Scenes</h1>
     </div>
-    <% if current_user %>
-      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %>
-    <% end %>
+    <%= form_tag(scenes_path, :method => "get", id: "search-form", class: "col-md-12") do %>
+    <div class="form-group">
+      <%= text_field_tag :search, params[:search], class: "search-query accent-text form-control", placeholder: "Film Title", type: "search", data: {autocomplete: scenes_autocomplete_scene_film_title_path} %>
+      <%= submit_tag "Search", class: "btn btn-special form-control" %>
+    </div>
+    <%end%>
     <div class="col-md-12 center-block">
       <div class="index col-md-12 index-panel">
+        <% if @scenes.size > 0 %>
         <% @scenes.each do |scene| %>
-        <div class="col-md-12 index">
+        <div class="col-md-12 index" id=<%=scene.id%>>
           <h5 class="accent-text"><%= link_to scene.title, scene_path(scene.id), class: "accent-text title" %></h5>
-          <p><span class="context-text"> directed by </span><span class="accent-text"><%= scene.director%></span><span class="context-text"> | released in </span><span class="accent-text"><%= scene.release_year%></span><span class="context-text"> | scene starring <span class="accent-text"><%= scene.actor_1%></span></p>
-          <div class="col-md-6 center-block"><hr></div>
+          <p>
+            <span class="context-text">
+              directed by
+            </span>
+            <span class="accent-text"><%= scene.director%></span>
+            <span class="context-text">
+              | released in
+            </span>
+            <span class="accent-text"><%= scene.release_year%></span>
+            <span class="context-text">
+              | scene starring
+              <span class="accent-text"><%= scene.actor_1%></span>
+            </p>
+            <div class="col-md-6 center-block"><hr></div>
+          </div>
+          <% end %>
+        <% else %>
+          <div class="col-md-12 index">
+            <h5 class="accent-text">your search for returned 0 result...try again?</h5>
+          </div>
+          <%= button_to "back to scenes", scenes_path, :method => :get, class: 'btn btn-special' %>
+          <% end %>
         </div>
-        <% end %>
       </div>
     </div>
   </div>
-</div>

@@ -1,18 +1,37 @@
+<script type="text/javascript" charset="utf-8">
+  $('#search').bind('railsAutocomplete.select', function (event, data) {
+    $('#search-form').submit()
+  });
+</script>
+
 <div class="container center-content">
   <div class="row col-md-12 center-content">
     <div class="col-md-12 center-block">
       <h1 class="title accent-text">Lists</h1>
     </div>
-    <% if current_user %>
-      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special' %>
-    <% end %>
+    <%= form_tag(lists_path, :method => "get", id: "search-form", class: "col-md-12") do %>
+    <div class="form-group">
+      <%= text_field_tag :search, params[:search], class: "search-query accent-text form-control", placeholder: "List Title", type: "search", data: {autocomplete: lists_autocomplete_list_title_path} %>
+      <%= submit_tag "Search", class: "btn btn-special form-control" %>
+      <% if current_user %>
+      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special form-control' %>
+      <% end %>
+    </div>
+    <%end%>
     <div class="col-md-12 center-block">
       <div class="index col-md-12 index-panel">
         <% @lists.each do |list| %>
         <div class="col-md-12 index">
           <h5 class="accent-text"><%= link_to list.title, list_path(list.id), class: "accent-text title" %></h5>
-          <p><span class="context-text"> curator </span><span class="accent-text"><%=link_to "#{list.user.username}", user_path(list.user.id), class: "accent-text" %></span></p>
-          <p><span class="context-text"><%= list.description%></span></p>
+          <p>
+            <span class="context-text">
+              curator
+            </span>
+            <span class="accent-text"><%=link_to "#{list.user.username}", user_path(list.user.id), class: "accent-text" %></span>
+          </p>
+          <p>
+            <span class="context-text"><%= list.description%></span>
+          </p>
           <div class="col-md-6 center-block"><hr></div>
         </div>
         <% end %>

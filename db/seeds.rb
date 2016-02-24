@@ -8,7 +8,8 @@
 
 # new_scene = Scene.create ({
 #   locations: "Mason & California Streets, San Francisco, CA",
-#   title: "180",
+#   title: "180 Mason & California Streets, San Francisco, CA",
+#   film_title: "180",
 #   writer: "Umarji Anuradha, Jayendra, Aarthi Sriram, & Suba ",
 #   director: "Jayendra",
 #   release_year: "2011",
@@ -29,19 +30,22 @@ json = ActiveSupport::JSON.decode(File.read('db/seeds/trial.json'))
 
 json.each do |a|
   new_scene = Scene.new
-  @locations = a['locations']
-  if @locations == nil
-    @locations = 'San Francisco, CA'
+  locations = a['locations']
+  title = a['title']
+  actor_1 = a['actor_1']
+  if locations == nil
+    break
   else
-    @locations = @locations + ', San Francisco, CA'
+    locations = locations + ', San Francisco, CA'
+    new_scene.locations = locations
+    new_scene.title = title + " filmed at " + locations
   end
-  new_scene.locations = @locations
-  new_scene.title = a['title']
+  new_scene.film_title = title
   new_scene.writer = a['writer']
   new_scene.director = a['director']
   new_scene.release_year = a['release_year']
   new_scene.production_company = a['production_company']
-  new_scene.actor_1 = a['actor_1']
+  new_scene.actor_1 = actor_1
   new_scene.save
 end
 
@@ -64,8 +68,11 @@ end
     3.times do
       # new scene
       new_scene = Scene.new
-      new_scene.locations = "Mason & California Streets, San Francisco, CA"
-      new_scene.title = FFaker::HipsterIpsum.words(rand(1)+1).join(" ")
+      locations = "Mason & California Streets, San Francisco, CA"
+      film_title = FFaker::HipsterIpsum.words(rand(1)+1).join(" ")
+      new_scene.locations = locations
+      new_scene.film_title = film_title
+      new_scene.title = film_title + " filmed at " + locations
       new_scene.writer = FFaker::Name.last_name
       new_scene.director = FFaker::Name.last_name
       new_scene.release_year = "2011"
@@ -96,8 +103,11 @@ end
     3.times do
       # new scene
       new_scene = Scene.new
-      new_scene.locations = "Mason & California Streets, San Francisco, CA"
-      new_scene.title = FFaker::HipsterIpsum.words(rand(1)+1).join(" ")
+      locations = "Mason & California Streets, San Francisco, CA"
+      film_title = FFaker::HipsterIpsum.words(rand(1)+1).join(" ")
+      new_scene.locations = locations
+      new_scene.film_title = film_title
+      new_scene.title = film_title + " filmed at " + locations
       new_scene.writer = FFaker::Name.last_name
       new_scene.director = FFaker::Name.last_name
       new_scene.release_year = "2011"

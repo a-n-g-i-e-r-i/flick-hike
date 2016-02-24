@@ -1,17 +1,18 @@
-<div class="container center-content" id="map-panel">
+<div class="container center-content" id="hike-panel">
   <div class="row col-md-12 center-content">
-    <h1 class="text-center title accent-text"><strong>Map</strong></h1>
-    <h4 class="text-center">Select from a curated list of scenes to get a taste of what its like to Flick Hike in San Francisco</h4>
+    <h1 class="text-center title accent-text"><strong>Try Flick Hike</strong></h1>
+    <h4 class="text-center">Select from a curated list of scenes to get a taste of what its like to go for a Flick Hike in San Francisco</h4><br>
+    <h5 class="text-center context-text">We will use your current location as the start of the hike loop</h5>
     <h5 class="text-center"><a class="accent-text" href="/signup">Sign up</a> now to get in on the scene</h5><br>
-    <div class="col-md-6 center-block">
-      <div class="center-block map" id="map"></div>
-    </div>
-    <div class="col-md-6 center-block">
-      <form class="form-horizontal map center-block">
-        <div class="form-group center-content">
-          <label class=accent-text >Scenes</label>
-          <i class="context-text">(Ctrl-Click up to eight selections)</i> <br>
-          <select multiple id="waypoints" class="input-lg">
+    <div class="col-md-6 center-blockmap" id="map"></div>
+    <div class="col-md-6 center-block map-panel">
+      <form class="col-md-12 map-selection">
+        <div class="form-group">
+          <label class=accent-text >Hike Scenes</label>
+          <i class="context-text">(Ctrl-Click up to eight selections)</i><br>
+        </div>
+        <div class="form-group">
+          <select multiple id="waypoints" class="input-lg pull-left">
             <option value="City and County of San Francisco City Hall, United States, 1 Doctor Carlton B Goodlett Place, San Francisco, CA 94102">San Francisco City Hall</option>
             <option value="EPIC Steak, 369 The Embarcadero, San Francisco, CA 94105">EPIC Steak</option>
             <option value="City and County of San Francisco City Hall, United States, 1 Doctor Carlton B Goodlett Place, San Francisco, CA 94102">City and County of San Francisco City Hall</option>
@@ -27,8 +28,7 @@
           <button type="button" class="btn btn-special" id="submit">Map List</button>
         </div>
       </form>
+      <div class="col-md-12 center-block" id="right-panel"></div>
     </div>
   </div>
-</div>
-<div id="directions-panel"></div>
 </div>

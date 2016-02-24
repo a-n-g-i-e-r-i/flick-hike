@@ -1,13 +1,9 @@
 class ScenesController < ApplicationController
-
   def index
     @scenes = Scene.all
-    ########################
     if params[:search]
-    @scenes = Scene.search(params[:search]).order("created_at DESC")
-  else
-    @scenes = Scene.all.order('created_at DESC')
-  end
+      @scenes = Scene.film_title_like("%#{params[:search]}%").order('film_title')
+    end
   end
 
   def show
@@ -17,13 +13,10 @@ class ScenesController < ApplicationController
       @user_lists = []
       @temp_lists = current_user.lists
       @temp_lists.each do |a|
-        if !a.scenes.find_by_id(@scene.id)
-          @user_lists << a
-        end
+        @user_lists << a unless a.scenes.find_by_id(@scene.id)
       end
     else
-      @user_lists = ""
+      @user_lists = ''
     end
   end
-
 end

@@ -4,6 +4,9 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all
+    if params[:search]
+      @lists = List.title_like("%#{params[:search]}%").order('title')
+    end
   end
 
   def new

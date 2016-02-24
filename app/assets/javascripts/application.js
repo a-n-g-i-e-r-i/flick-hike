@@ -32,7 +32,7 @@ function initMap() {
     },
     {
       elementType: 'labels',
-      stylers: [{visibility: 'off'}]
+      stylers: [{visibility: 'on'}]
     },
     {
       featureType: 'water',

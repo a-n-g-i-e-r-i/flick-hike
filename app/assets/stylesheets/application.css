@@ -50,7 +50,7 @@
   padding: 15px 5px 15px 5px;
   border: solid #81abb4 2px;
   border-radius: 15px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .index-panel {
@@ -61,7 +61,7 @@
   padding: 15px 5px 15px 5px;
   border: solid #81abb4 2px;
   border-radius: 15px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .index {

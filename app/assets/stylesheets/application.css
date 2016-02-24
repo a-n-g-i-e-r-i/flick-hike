@@ -104,6 +104,10 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
+.glyphicon {
+    font-size: 50px;
+}
+
 #notice {
   margin: 50px;
 }

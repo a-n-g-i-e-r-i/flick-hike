@@ -174,7 +174,7 @@ Similar to my wireframe process, I followed an iterative design for my data mode
 
 
 ## Milestones
-**Three *~~blocks*~~ of code I'm proud of, frustrated by, and generally ecstatic about**
+**Three *blocks* of code I'm frustrated by and/or generally ecstatic about**
 
 *Block One*
 ```javascript
@@ -243,19 +243,19 @@ Critical components of your code to ensure that it works
 * **Extended Search Functionality in Indices** 
 Add 'search by' option to search indices by actor, writer, director, release year, etc.
 
-* ** Allow Users to Follow Other Users** 
+* **Allow Users to Follow Other Users** 
 Add a join table relationship between users, and display their 'follow' and 'followers' data in profile
 
-* ** User Ordered List** 
+* **User Ordered List** 
 Allow users to order the scenes in their lists
 
-* ** Add Scenes to List from List Show Page** 
+* **Add Scenes to List from List Show Page** 
 Allow users to select scenes from a drop down list on the list show page, and add them at the click of a button
 
-* ** Select Nearest Scene as Start Point of Hike, Or User Defined Start and End Points** 
+* **Select Nearest Scene as Start Point of Hike, Or User Defined Start and End Points** 
 More options for hike generation give users more power over what type of hike they get
 
-* ** Add Estimated Length And Duration of Entire Hike** 
+* **Add Estimated Length And Duration of Entire Hike** 
 Currently Google Directions Service give duration and length of each hike leg. The new feature will give an overview of the entire hike's length and duration
 
 ---

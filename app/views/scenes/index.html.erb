@@ -15,30 +15,6 @@
       <%= submit_tag "Search", class: "btn btn-special form-control" %>
     </div>
     <%end%>
-
-
-    <% if current_user %>
-    <%= form_for @listscene, :html => {:class => "form-horizontal center-block"} do |f| %>
-      <hr>
-      <% if @user_lists.size > 0 %>
-        <div class="form-group">
-          <%= f.label "Add this scene to one or more of your lists using the menu below", class: "context-text" %>
-          <%= f.select( :list_id, @user_lists.collect { |a| [a.title, a.id] }, {:required => true}, {:multiple => true, class: "input-lg"}) -%>
-        </div>
-        <div class="form-group">
-          <%= f.hidden_field :scene_id, :value => params[:id] %>
-        </div>
-        <div class="form-group">
-          <%= f.submit "Add", class: "btn btn-special form-control" %>
-        </div>
-        <strong class="context-text">or</strong>
-      <% end %>
-    <% end %>
-    <%= button_to "Add to New list", scene_new_list_path, :method => :get, class: 'btn btn-special' %>
-    <% end %>
-
-
-    
     <div class="col-md-12 center-block">
       <div class="index col-md-12 index-panel">
         <% if @scenes.size > 0 %>
@@ -62,12 +38,12 @@
         </div>
         <% end %>
         <% else %>
-          <div class="col-md-12 index">
-            <h5 class="accent-text">your search for returned 0 result...try again?</h5>
-          </div>
-          <%= button_to "back to scenes", scenes_path, :method => :get, class: 'btn btn-special' %>
-          <% end %>
+        <div class="col-md-12 index">
+          <h5 class="accent-text">your search for returned 0 result...try again?</h5>
         </div>
+        <%= button_to "back to scenes", scenes_path, :method => :get, class: 'btn btn-special' %>
+        <% end %>
       </div>
     </div>
   </div>
+</div>

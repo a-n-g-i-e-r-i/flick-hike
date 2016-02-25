@@ -176,13 +176,13 @@ Similar to my wireframe process, I followed an iterative design for my data mode
 ## Milestones
 **Three *blocks* of code I'm frustrated by and/or generally ecstatic about**
 
-*Block One*
-A scope issue, this block of code represents the gateway to getting google maps up and running on a web page.
+*A scope issue in the application.js file, this block of code represents the gateway to getting google maps up and running on a web page*
+
 ```javascript
 google.maps.event.addDomListener(window, 'load', initMap);
 ```
 
-*Block Two*
+*Allow's users to add a scene to multiple lists simultaneously through the ListScene join table in the /scenes/show.html.erb file*
 ```Ruby
 var s = "JavaScript syntax highlighting";
 alert(s);
@@ -190,8 +190,19 @@ alert(s);
 
 *Block Three*
 ```Ruby
-var s = "JavaScript syntax highlighting";
-alert(s);
+<% if @user_lists.size > 0 %>
+	<div class="form-group">
+	  <%= f.label "Add this scene to one or more of your lists using the menu below", class: "context-text" %>
+	  <%= f.select :list_id, @user_lists.collect { |a| [a.title, a.id] }, {:required => true}, {:multiple => true, class: "input-lg"} -%>
+        </div>
+	<div class="form-group">
+	  <%= f.hidden_field :scene_id, :value => params[:id] %>
+	</div>
+	<div class="form-group">
+	  <%= f.submit "Add", class: "btn btn-special form-control" %>
+	</div>
+	<strong class="context-text">or</strong>
+ <% end %>
 ```
 
 ---

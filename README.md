@@ -18,19 +18,27 @@
 
 ![Screenshot 7](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-07.png?raw=true)
 
-![Screenshot 8](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-08.png?raw=true)
-
-![Screenshot 9](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-09.png?raw=true)
+**Scenes Index and Autocomplete Search**
 
 ![Screenshot 10](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-10.png?raw=true)
 
 ![Screenshot 11](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-11.png?raw=true)
 
+**Scene Show Page**
+
 ![Screenshot 12](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-13.png?raw=true)
+
+**Add Scene To Existing List**
 
 ![Screenshot 13](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-12.png?raw=true)
 
-![Screenshot 2](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png?raw=true)
+![Screenshot 14](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-14.png?raw=true)
+
+**About Page**
+
+![Screenshot 8](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-08.png?raw=true)
+
+![Screenshot 9](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-09.png?raw=true)
 
 # Contents
 

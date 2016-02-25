@@ -44,7 +44,7 @@
   max-height: 300px;
   width: 100%;
   padding: 15px 5px 15px 5px;
-  border: solid #131367 2px;
+  background-color: #f0f0f4;
   border-radius: 15px;
   overflow-y: scroll;
 }
@@ -55,7 +55,7 @@
   max-height: 425px;
   width: 100%;
   padding: 15px 5px 15px 5px;
-  border: solid #131367 2px;
+  background-color: #f0f0f4;
   border-radius: 15px;
   overflow-y: scroll;
 }

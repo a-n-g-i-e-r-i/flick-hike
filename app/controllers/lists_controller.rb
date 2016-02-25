@@ -48,25 +48,24 @@ class ListsController < ApplicationController
   def update
     @list = List.find_by_id(params[:id])
     if current_user == @list.user
-      @scenes = []
-      @flash_notices = []
-      @scene_ids = params[:scene_id]
-      if @scene_ids
-        @scene_ids.each do |l|
+      flash_notices = []
+      scene_ids = params[:scene_id]
+      if scene_ids
+        scene_ids.each do |l|
           if l.empty? do |a|
-            @scene_ids.delete(a)
+            scene_ids.delete(a)
           end
           else
-            @scene = Scene.find_by_id(l)
-            title = @scene.title
-            @listscene = ListScene.where({scene_id: @scene.id, list_id: @list.id})
-            ListScene.destroy(@listscene)
-            @flash_notices << title
+            scene = Scene.find_by_id(l)
+            title = scene.title
+            listscene = ListScene.where({scene_id: scene.id, list_id: @list.id})
+            ListScene.destroy(listscene)
+            flash_notices << title
           end
         end
       end
       if @list.update_attributes(list_params)
-        flash[:notice] = "Successfully updated your #{@list.title} list, and from it removed the following scenes: #{@flash_notices.join(", and ")}"
+        flash[:notice] = "Successfully updated your #{@list.title} list, and from it removed the following scenes: #{flash_notices.join(", and ")}"
         redirect_to list_path(@list)
       else
         flash[:error] = @list.errors.full_messages.join(", ")
@@ -84,6 +83,10 @@ class ListsController < ApplicationController
       flash[:notice] = "Successfully deleted list."
     end
     redirect_to user_path(current_user)
+  end
+
+  def batch_add
+    qwerty
   end
 
   private

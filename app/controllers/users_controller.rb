@@ -35,14 +35,15 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find_by_id(params[:id])
-    if current_user == @user
-      if @user.update_attributes(user_params)
+    user_id = params[:id]
+    user = User.find_by_id(user_id)
+    if current_user == user
+      if user.update_attributes(user_params)
         flash[:notice] = "Successfully updated user info"
-        redirect_to user_path(@user)
+        redirect_to user_path(user)
       else
-        flash[:error] = @user.error.full_messages.join(", ")
-        redirect_to edit_user_path(@user)
+        flash[:error] = user.error.full_messages.join(", ")
+        redirect_to edit_user_path(user)
       end
     else
       redirect_to user_path(current_user)

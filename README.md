@@ -2,6 +2,10 @@
 
 **[FLICK HIKE](http://www.filmhikes.com) is San Francisco's filmic gateway to urban life. Curate lists of memorable film scenes, plot your own filmic adventures around the city, and share them with others.**
 
+**Welcome Page**
+
+![Screenshot 1](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/film-hikes-EXTENDED-wireframe.png?raw=true)
+
 # Contents
 
 * **[Getting Started](#getting-started)**

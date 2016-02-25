@@ -262,7 +262,7 @@ def create
       <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special form-control' %>
       <% end %>
     </div>
-    <%end%>
+<%end%>
 ```
 
 ---

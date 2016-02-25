@@ -4,7 +4,33 @@
 
 **Welcome Page**
 
-![Screenshot 1](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/film-hikes-EXTENDED-wireframe.png?raw=true)
+![Screenshot 1](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png?raw=true)
+
+![Screenshot 2](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-02.png?raw=true)
+
+![Screenshot 3](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-03.png?raw=true)
+
+![Screenshot 4](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-04.png?raw=true)
+
+![Screenshot 5](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-05.png?raw=true)
+
+![Screenshot 6](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-06.png?raw=true)
+
+![Screenshot 7](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-07.png?raw=true)
+
+![Screenshot 8](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-08.png?raw=true)
+
+![Screenshot 9](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-09.png?raw=true)
+
+![Screenshot 10](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-10.png?raw=true)
+
+![Screenshot 11](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-11.png?raw=true)
+
+![Screenshot 12](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-13.png?raw=true)
+
+![Screenshot 13](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-12.png?raw=true)
+
+![Screenshot 2](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png?raw=true)
 
 # Contents
 

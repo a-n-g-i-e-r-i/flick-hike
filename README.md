@@ -180,40 +180,22 @@ Similar to my wireframe process, I followed an iterative design for my data mode
 ## Milestones
 **Three *blocks* of code I'm frustrated by and/or generally ecstatic about**
 
-*A scope issue in the application.js file, this block of code represents the gateway to getting google maps up and running on a web page*
-
+*Block One*
 ```javascript
-google.maps.event.addDomListener(window, 'load', initMap);
+var s = "JavaScript syntax highlighting";
+alert(s);
 ```
 
-*Autocomplete function for the /scenes/index.html.erb and /lists/index.html.erb pages*
-```
-<%= form_tag(lists_path, :method => "get", id: "search-form", class: "col-md-12") do %>
-    <div class="form-group">
-      <%= text_field_tag :search, params[:search], class: "search-query accent-text form-control", placeholder: "List Title", type: "search", data: {autocomplete: lists_autocomplete_list_title_path} %>
-      <%= submit_tag "Search", class: "btn btn-special form-control" %>
-      <% if current_user %>
-      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special form-control' %>
-      <% end %>
-    </div>
-<%end%>
-```
-
-*Allows users to add a scene to multiple lists simultaneously through the ListScene join table in the /scenes/show.html.erb file*
+*Block Two*
 ```Ruby
-<% if @user_lists.size > 0 %>
-	<div class="form-group">
-	  <%= f.label "Add this scene to one or more of your lists using the menu below", class: "context-text" %>
-	  <%= f.select :list_id, @user_lists.collect { |a| [a.title, a.id] }, {:required => true}, {:multiple => true, class: "input-lg"} -%>
-        </div>
-	<div class="form-group">
-	  <%= f.hidden_field :scene_id, :value => params[:id] %>
-	</div>
-	<div class="form-group">
-	  <%= f.submit "Add", class: "btn btn-special form-control" %>
-	</div>
-	<strong class="context-text">or</strong>
- <% end %>
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+*Block Three*
+```Ruby
+var s = "JavaScript syntax highlighting";
+alert(s);
 ```
 
 ---

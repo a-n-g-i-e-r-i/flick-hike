@@ -1,6 +1,6 @@
 # FLICK HIKE
 
-**[FLICK HIKE](www.filmhikes.com) is San Francisco's filmic gateway to urban life. Curate lists of memorable film scenes, plot your own filmic adventures around the city, and share them with others.**
+**[FLICK HIKE](http://www.filmhikes.com) is San Francisco's filmic gateway to urban life. Curate lists of memorable film scenes, plot your own filmic adventures around the city, and share them with others.**
 
 # Contents
 
@@ -207,7 +207,6 @@ alert(s);
 	* Javascript
 
 * **Gems/External Libraries**
-	* D3
 	* jQuery
 	* bcrypt
 	* Bootstrap
@@ -267,4 +266,4 @@ Currently Google Directions Service give duration and length of each hike leg. T
 
 [Github](https://github.com/isangieri)
 
-[www.isangieri.com](www.isangieri.com)
+[www.isangieri.com](http://www.isangieri.com)

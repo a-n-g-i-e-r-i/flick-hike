@@ -17,10 +17,10 @@ iterative storyboarding
 process, features, organization
 * **[Technologies](#technologies)**
 take a look at the tech
-* **[Further Exploration](#further-exploration)**
+* **[Big Goals](#big-goals)**
 big goals for future feature development
 * **[About](#about)**
-related apps
+related code and applications
 
 ---
 
@@ -148,40 +148,58 @@ Through four stages of wireframing, I finally carved the app down to a reasonabl
 
 As you can see, the wireframes go from a large interconnected grid of pages, to a streamlined MVP.
 
+**Iteration One**
 ![Wireframe 01](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/film-hikes-EXTENDED-wireframe.png?raw=true)
 
+**Iteration Two**
 ![Wireframe 02](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/film-hikes-BASIC-wireframes.png?raw=true)
 
+**Iteration Three**
 ![Wireframe 03](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/film-hikes-BASICest-wireframes.png?raw=true)
 
+**Iteration Four**
 ![Wireframe 04](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/film-hikes-BASICestest-wireframe.png?raw=true)
 
 ## Data Models
 Similar to my wireframe process, I followed an iterative design for my data models, narrowing in on core functionality through examining several ways of modeling my data.
 
+**Iteration One**
+![ERD 01](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/erd-final-02.jpg?raw=true)
+
+**Iteration Two**
+![ERD 02](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/erd-final-01.jpg?raw=true)
+
+**Iteration Three**
+![ERD 03](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/erd-final.jpg?raw=true)
+
 
 
 ## Milestones
-Three lines of code I'm proud of, frustrated by, and generally ecstatic about
-Divide your work into parts - the most essential features for your MVP, features that are important but not essential, and features that can be saved for a later iteration. Create 3-5 major milestones with dates outlining when you expect essential features will be done.
+**Three *~~blocks*~~ of code I'm proud of, frustrated by, and generally ecstatic about**
+
+*Block One*
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+*Block Two*
+```Ruby
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+*Block Three*
+```Ruby
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
 
 ---
 
-## Big Goals
+## Technologies
 
-###### What should I focus on?
-
-* **Discover or invent an idea**, preferably one with some group of users that would jump at the chance to really use your product.
-* **Design a product *you* want to build**, and choose appropriate technologies to build it.
-* **Pitch your idea** to your classmates and instructors, and incorporate their feedback.
-* **Make productive use of your time**, and balance responsibilities to make a complete, impressive-looking project.
-* **Focus on writing solid, real-world code** that is well-documented and DRY.
-
----
-
-## Technical Requirements
-
-###### What technologies will I be using?
+###### take a look at the tech
 
 **Your app must meet the following technical requirements:**
 
@@ -196,13 +214,28 @@ Divide your work into parts - the most essential features for your MVP, features
 
 ---
 
-## Further Exploration
+## Big Goals
+
+###### future feature development ideas for Flick Hike
+
+* **Incorporate an external API** to add data and functionality to your application.
+
+* **Use a data visualization library** to help users understand your core data.
+
+* **Implement third-party log in** to allow users to access data from other services.
+
+* **Build something you can really launch**, and recruit an actual user-base.
+
+* **Test** critical components of your code to ensure that it works.
+
+* **Research web accessibility** (e.g., for blind users), and apply accessibility principles to your app.
+
+---
+
+## About
 
 ###### What if I want to do more?
 
 * **Incorporate an external API** to add data and functionality to your application.
+
 * **Use a data visualization library** to help users understand your core data.
-* **Implement third-party log in** to allow users to access data from other services.
-* **Build something you can really launch**, and recruit an actual user-base.
-* **Test** critical components of your code to ensure that it works.
-* **Research web accessibility** (e.g., for blind users), and apply accessibility principles to your app.

@@ -1,0 +1,50 @@
+<% if current_user %>
+<%= form_tag(listscenes_path, :method => "post", id: "search-form", class: "col-md-12") do %>
+  select one list
+  select many scenes
+<% end %>
+<% else %>
+<form class="form-horizontal center-block">
+<hr>
+<% if @user_lists.size > 0 %>
+  <div class="form-group">
+    <label class="context-text">highlight one or more lists, check the scenes you'd like to add, and hit the "add" button to curate your lists</label>
+    <select multiple id="user_lists" class="input-lg pull-left">
+      <%= options_from_collection_for_select(@user_lists, :id, :title, {:multiple => true, class: "input-lg"}) -%>
+    </select>
+  </div>
+  <div class="form-group">
+    <%= button_to "Add", type: "button", class: "btn btn-special form-control" %>
+  </div>
+  <div class="index col-md-12 index-panel">
+    <% if @scenes.size > 0 %>
+    <% @scenes.each do |scene| %>
+    <div class="form-group col-md-12 index">
+      <input type="checkbox" id="scene_id[]" name="scene_id[]" value=<%= scene.id %> >
+      <span><%= link_to scene.title, scene_path(scene.id), class: "accent-text title" %></span>
+      <p>
+      <span class="context-text">
+        directed by
+      </span>
+      <span class="accent-text"><%= scene.director%></span>
+      <span class="context-text">
+        | released in
+      </span>
+      <span class="accent-text"><%= scene.release_year%></span>
+      <span class="context-text">
+        | scene starring
+        <span class="accent-text"><%= scene.actor_1%></span>
+      </p>
+      <div class="col-md-6 center-block"><hr></div>
+    </div>
+  </form>
+  <% end %>
+  <% end %>
+  <% else %>
+  <div class="col-md-12 index">
+    <h5 class="accent-text">your search for returned 0 result...try again?</h5>
+  </div>
+  <%= button_to "back to scenes", scenes_path, :method => :get, class: 'btn btn-special' %>
+  <% end %>
+</div>
+<% end %>

@@ -177,9 +177,9 @@ Similar to my wireframe process, I followed an iterative design for my data mode
 **Three *blocks* of code I'm frustrated by and/or generally ecstatic about**
 
 *Block One*
+A scope issue, this block of code represents the gateway to getting google maps up and running on a web page.
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+google.maps.event.addDomListener(window, 'load', initMap);
 ```
 
 *Block Two*

@@ -17,7 +17,7 @@
  */
 
 .jumbo {
-  background-image: url("https://media.giphy.com/media/zHqjJuAAJNEYg/giphy.gif");
+  background-image: url("/assets/bullitt-gif.gif");
   height: 500px;
 	background-size: cover;
   overflow: hidden;
@@ -26,6 +26,14 @@
   border-radius: 0px;
 }
 
+.giant {
+  background-image: url("/assets/vertigo-bridge.gif")
+  height: 300px;
+	background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  width: 200%;
+}
 
 #map {
   min-width: 200px;
@@ -89,6 +97,17 @@
 
 .container {
   margin-top: 25px;
+}
+
+.img-square {
+
+  height: 200px;
+  width: 200px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
 }
 
 .gmnoprint {

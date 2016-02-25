@@ -1,8 +1,8 @@
 <%= form_for @user, :html => {:class => "form-horizontal center-block"} do |f| %>
   <% if current_user == @user %>
-    <h1 class="form-group text-color title"><%= @user.username%>'s Info</h1>
+    <h1 class="form-group text-color title margin-top"><%= @user.username%>'s Info</h1>
   <% else %>
-    <h1 class="form-group text-color title">Signup</h1>
+    <h1 class="form-group text-color title margin-top">Signup</h1>
   <% end %>
   <div class="form-group">
     <%= f.label :username, "username", class: "control-label" %>

@@ -17,7 +17,7 @@
  */
 
 .jumbo {
-  background-image: url("http://45.media.tumblr.com/a2caa031e456ed5d99e0d8a71ac83826/tumblr_mpuq8z9pWW1qc2bleo1_500.gif");
+  background-image: url("https://media.giphy.com/media/zHqjJuAAJNEYg/giphy.gif");
   height: 500px;
 	background-size: cover;
   overflow: hidden;
@@ -85,8 +85,10 @@
   min-width: 200px;
 }
 
+.margin-top { margin-top: 25px;}
+
 .container {
-  margin: 15px;
+  margin-top: 25px;
 }
 
 .gmnoprint {
@@ -97,7 +99,7 @@
 }
 
 body {
-  padding-top: 50px;
+  padding-top: 25px;
   min-width: 300px;
 }
 
@@ -129,6 +131,7 @@ a:-webkit-any-link {
 }
 
 .photo_title {
+  padding-top: 50px;
   font-size: 50px;
   color: #fff;
   text-transform: uppercase;

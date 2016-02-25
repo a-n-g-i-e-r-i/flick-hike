@@ -1,5 +1,5 @@
 <div class="container col-md-12 text-center">
-  <h1 class="title accent-text"><%= @list.title %></h1>
+  <h1 class="title accent-text margin-top"><%= @list.title %></h1>
   <h4 class="context-text">curator</span> <span class="accent-text"><%=link_to "#{@list.user.username}", user_path(@list.user.id), class: "accent-text" %></h4>
   <h5><%= @list.description %></h5>
   <% if current_user == @list.user %>

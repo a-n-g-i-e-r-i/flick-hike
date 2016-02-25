@@ -1,5 +1,5 @@
 <%= form_for @list, :html => {:class => "form-horizontal center-block"} do |f| %>
-  <h1 class="form-group text-color title accent-text">Curate List</h1>
+  <h1 class="form-group text-color title accent-text margin-top">Curate List</h1>
   <% if current_scene %>
   <div class="form-group">
     <%= check_box_tag "scene_id", params[:id], checked: "true" %>

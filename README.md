@@ -1,7 +1,6 @@
 # FLICK HIKE
 
-**[FLICK HIKE](www.filmhikes.comWednesday, 24. February 2016 06:37PM 
-) is San Francisco's filmic gateway to urban life. Curate lists of memorable film scenes, plot your own filmic adventures around the city, and share them with others.**
+**[FLICK HIKE](www.filmhikes.com) is San Francisco's filmic gateway to urban life. Curate lists of memorable film scenes, plot your own filmic adventures around the city, and share them with others.**
 
 # Contents
 
@@ -201,16 +200,31 @@ alert(s);
 
 ###### take a look at the tech
 
-**Your app must meet the following technical requirements:**
+* **Languages**
+	* Ruby on Rails
+	* HTML5
+	* CSS3
+	* Javascript
 
-* **Use a database**, whether it's one we've covered in class or one you want to learn.
-* **Build a full-stack application** by making your own back-end and your own front-end.
-* **Create a complete product**, which most likely means multiple related resources and CRUD functionality for each.
-* **Create a focused product**. Know which features are essential to build for your MVP and which to set aside for later.
-* **Craft thoughtful user stories** that are significant enough to help you ensure a pleasing and logical user experience.
-* **Handle errors gracefully**, and provide useful feedback to users when errors or validation failures do occur.
-* **Make a product that's impressive-looking**; up your design and style game to kick your portfolio up a notch.
-* **Deploy your application online** so it's publicly accessible.
+* **Gems/External Libraries**
+	* D3
+	* jQuery
+	* bcrypt
+	* Bootstrap
+	* jQuery
+	* jQuery UI
+	* FFaker
+	* Rails jQuery Autocomplete
+
+* **Third Party APIs and Datasets**
+	* Google Waypoints
+	* Google HTML5 Geolocation
+	* Google Maps
+	* Google Directions Service
+	* SF Open Data [Film Locations in San Francisco](https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am) 
+
+* Database
+	*  PostgreSQL
 
 ---
 
@@ -218,24 +232,39 @@ alert(s);
 
 ###### future feature development ideas for Flick Hike
 
-* **Incorporate an external API** to add data and functionality to your application.
+* **Incorporate calls to SF Open Data JSON endpoint**
+Add functionality to currently seeded data
 
-* **Use a data visualization library** to help users understand your core data.
+* **D3 Hike Memento**
+Generate hike loops svg from user location along hike path as graphic element for users to store in their profiles
 
-* **Implement third-party log in** to allow users to access data from other services.
+* **Test**
+Critical components of your code to ensure that it works
 
-* **Build something you can really launch**, and recruit an actual user-base.
+* **Extended Search Functionality in Indices** 
+Add 'search by' option to search indices by actor, writer, director, release year, etc.
 
-* **Test** critical components of your code to ensure that it works.
+* ** Allow Users to Follow Other Users** 
+Add a join table relationship between users, and display their 'follow' and 'followers' data in profile
 
-* **Research web accessibility** (e.g., for blind users), and apply accessibility principles to your app.
+* ** User Ordered List** 
+Allow users to order the scenes in their lists
+
+* ** Add Scenes to List from List Show Page** 
+Allow users to select scenes from a drop down list on the list show page, and add them at the click of a button
+
+* ** Select Nearest Scene as Start Point of Hike, Or User Defined Start and End Points** 
+More options for hike generation give users more power over what type of hike they get
+
+* ** Add Estimated Length And Duration of Entire Hike** 
+Currently Google Directions Service give duration and length of each hike leg. The new feature will give an overview of the entire hike's length and duration
 
 ---
 
 ## About
 
-###### What if I want to do more?
+###### check out Is Angieri's Github page and website
 
-* **Incorporate an external API** to add data and functionality to your application.
+[Github](https://github.com/isangieri)
 
-* **Use a data visualization library** to help users understand your core data.
+[www.isangieri.com](www.isangieri.com)

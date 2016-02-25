@@ -182,13 +182,20 @@ Similar to my wireframe process, I followed an iterative design for my data mode
 google.maps.event.addDomListener(window, 'load', initMap);
 ```
 
-*Allow's users to add a scene to multiple lists simultaneously through the ListScene join table in the /scenes/show.html.erb file*
-```Ruby
-var s = "JavaScript syntax highlighting";
-alert(s);
+*Autocomplete function for the /scenes/index.html.erb and /lists/index.html.erb pages*
+```
+<%= form_tag(lists_path, :method => "get", id: "search-form", class: "col-md-12") do %>
+    <div class="form-group">
+      <%= text_field_tag :search, params[:search], class: "search-query accent-text form-control", placeholder: "List Title", type: "search", data: {autocomplete: lists_autocomplete_list_title_path} %>
+      <%= submit_tag "Search", class: "btn btn-special form-control" %>
+      <% if current_user %>
+      <%= button_to "curate new list", new_list_path, :method => :get, class: 'btn btn-special form-control' %>
+      <% end %>
+    </div>
+<%end%>
 ```
 
-*Block Three*
+*Allows users to add a scene to multiple lists simultaneously through the ListScene join table in the /scenes/show.html.erb file*
 ```Ruby
 <% if @user_lists.size > 0 %>
 	<div class="form-group">

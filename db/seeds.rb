@@ -34,7 +34,7 @@ json.each do |a|
   title = a['title']
   actor_1 = a['actor_1']
   if locations == nil
-    break
+    next
   else
     locations = locations + ', San Francisco, CA'
     new_scene.locations = locations
@@ -54,7 +54,7 @@ end
     username: "bagel",
     description: "Film lover | Owner of many bad romantic comedies | Lover of San Francisco | Like to walk around.",
     email: "bagel@isangieri.com",
-    password: "yoyoyo"
+    password: "yoyoyoyo"
   })
 
   3.times do
@@ -89,7 +89,7 @@ end
   user_params[:username] = FFaker::Name.last_name
   user_params[:description] = FFaker::Lorem.phrase
 	user_params[:email] = FFaker::Internet.email
-	user_params[:password]  = "123456"
+	user_params[:password]  = "12345678"
 
 	new_user = User.create(user_params)
 

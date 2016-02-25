@@ -14,7 +14,7 @@
       <% if @user_lists.size > 0 %>
         <div class="form-group">
           <%= f.label "Add this scene to one or more of your lists using the menu below", class: "context-text" %>
-          <%= f.select( :list_id, @user_lists.collect { |a| [a.title, a.id] }, {:required => true}, {:multiple => true, class: "input-lg"}) -%>
+          <%= f.select :list_id, @user_lists.collect { |a| [a.title, a.id] }, {:required => true}, {:multiple => true, class: "input-lg"} -%>
         </div>
         <div class="form-group">
           <%= f.hidden_field :scene_id, :value => params[:id] %>

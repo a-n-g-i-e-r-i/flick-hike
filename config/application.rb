@@ -31,8 +31,8 @@ module FlickHike
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    
+
     # Avoid precompilation of assets
-    config.assets.precompile = []
+    config.assets.precompile = [ /\w+\.(?!js|css).+/, /application.(css|js)$/ ]
   end
 end

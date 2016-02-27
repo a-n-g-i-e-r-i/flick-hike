@@ -17,7 +17,8 @@
  */
 
 .jumbo {
-  background-image: url("https://dl.dropboxusercontent.com/content_link/zE5A8jLQhgENJpeoApUklfjS8mKcdLbh3Sx0PqY88laNjyBlNXJ91qcMn6QXEcYx/file");
+  background-image:
+   url("https://dl.dropboxusercontent.com/s/v84b434ovd2n6z3/vertigo.gif?dl=0");
   height: 500px;
 	background-size: cover;
   overflow: hidden;

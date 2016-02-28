@@ -1,3 +1,9 @@
+<script>
+  //autocomplete-rails jquery-ui function
+  $('#search').bind('railsAutocomplete.select', function (event, data) {
+    $('#search-form').submit()
+  })
+</script>
 <div class="container center-content">
   <div class="row col-md-12 center-content">
     <div class="col-md-12 center-block">

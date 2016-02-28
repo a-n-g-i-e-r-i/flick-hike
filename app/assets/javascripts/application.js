@@ -11,18 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require jquery-ui/autocomplete
-//= require autocomplete-rails
 //= require autocomplete-rails
 //= require bootstrap/dist/js/bootstrap
 //= require turbolinks
-//= require_tree .
-
-function initMap() {
-  map.mapTypes.set(customMapTypeId, customMapType);
-  map.setMapTypeId(customMapTypeId);
-}
+//= require_tree
 
 function initMap() {
   var customMapType = new google.maps.StyledMapType([
@@ -125,5 +118,3 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, pos) {
     }
   });
 }
-
-google.maps.event.addDomListener(window, 'load', initMap);

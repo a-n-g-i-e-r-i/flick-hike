@@ -17,6 +17,13 @@
 //= require turbolinks
 //= require_tree
 
+ready = function() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDHxVxmugGpxokn3pEHsVX5281RNFFAw8M&signed_in=false&callback=initMap';
+   document.body.appendChild(script);
+};
+
 function initMap() {
   var customMapType = new google.maps.StyledMapType([
     {

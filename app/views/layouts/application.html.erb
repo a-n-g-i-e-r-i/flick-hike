@@ -9,6 +9,11 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%- if params[:controller] == 'lists_controller' and params[:action] == 'show' %>
+    <body data-no-turbolink="true">
+  <%- else %>
+    <body data-no-turbolink="false">
+  <%- end %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -29,7 +34,7 @@
       <!-- <div>
         <img class="navbar-brand-icon" src = "/assets/navbar-brand-icon.png">
       </div> -->
-      <a class="navbar-brand" href="/">Flick Hike</a>
+      <a class="navbar-brand"  data-no-turbolink="true" href="/">Flick Hike</a>
     </div>
     <div class="collapse navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -63,9 +68,5 @@
 			</span>
 		</div>
 	</footer>
-
-  <!-- Google Maps JavaScript API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHxVxmugGpxokn3pEHsVX5281RNFFAw8M&signed_in=false&callback=initMap"async defer></script>
-
 </body>
 </html>

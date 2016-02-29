@@ -10,32 +10,27 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap/dist/css/bootstrap
  *= require jquery-ui/autocomplete
  *= require_tree .
  *= require_self
  */
 
 .jumbo {
-  background-image:
-   url("https://dl.dropboxusercontent.com/s/v84b434ovd2n6z3/vertigo.gif?dl=0");
+  background-image: url("https://dl.dropboxusercontent.com/s/v84b434ovd2n6z3/vertigo.gif?dl=0");
   height: 500px;
-	background-size: cover;
+  background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
   width: 200%;
-  border-radius: 0px;
+  border-radius: 0;
 }
-
 .giant {
-  background-image: url("/assets/vertigo-bridge.gif")
-  height: 300px;
-	background-size: cover;
+  background-image:url("/assets/vertigo-bridge.gif") height: 300px;
+  background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
   width: 200%;
 }
-
 #map {
   min-width: 200px;
   min-height: 200px;
@@ -46,41 +41,35 @@
   margin-bottom: 15px;
   margin-right: 15px;
 }
-
 .map-panel {
   min-width: 200px;
   min-height: 200px;
   max-height: 300px;
   width: 100%;
-  padding: 15px 5px 15px 5px;
+  padding: 15px 5px;
   background-color: #f0f0f4;
   border-radius: 15px;
   overflow-y: scroll;
 }
-
 .index-panel {
   min-width: 200px;
   min-height: 200px;
   max-height: 425px;
   width: 100%;
-  padding: 15px 5px 15px 5px;
+  padding: 15px 5px;
   background-color: #f0f0f4;
   border-radius: 15px;
   overflow-y: scroll;
 }
-
 .index {
-  padding: 15px 15px 0 15px;
+  padding: 15px 15px 0;
 }
-
 .map-panel::-webkit-scrollbar {
   display: none;
 }
-
 .index-panel::-webkit-scrollbar {
   display: none;
 }
-
 #right-panel {
   line-height: 30px;
   margin-bottom: 15px;
@@ -88,68 +77,55 @@
   height: 100%;
   width: 100%;
 }
-
 #waypoints {
   max-width: 100%;
   min-width: 200px;
 }
-
-.margin-top { margin-top: 25px;}
-
+.margin-top {
+  margin-top: 25px;
+}
 .container {
   margin-top: 25px;
 }
-
 .img-square {
-
   height: 200px;
   width: 200px;
 }
-
 img {
   display: block;
   margin: 0 auto;
 }
-
 .gmnoprint {
-    display:none;
+  display: none;
 }
 .gmnoprint {
-    background:none !important;
+  background: none !important;
 }
-
 body {
   padding-top: 25px;
   min-width: 300px;
 }
-
 footer {
   margin-top: 50px;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
 }
-
 ul {
   list-style-type: none;
   color: #131367;
 }
-
 ul {
   margin-bottom: 50px;
 }
-
 a:-webkit-any-link {
   text-decoration: none;
 }
-
 .glyphicon {
-    font-size: 50px;
+  font-size: 50px;
 }
-
 #notice {
   margin: 50px;
 }
-
 .photo_title {
   padding-top: 50px;
   font-size: 50px;
@@ -161,85 +137,80 @@ a:-webkit-any-link {
   transform: translatey(-50%);
   transform: translatex(0%);
 }
-
 .title {
   color: #2E2E2E;
   text-transform: uppercase;
 }
-
 .accent-text {
   color: #131367;
   font-weight: bold;
 }
-
 .context-text {
   color: #7F7777;
 }
-
 .center-content {
   margin: 0 auto;
 }
-
 .profile_photo {
-	width: 280px;
-	height: 300px;
+  width: 280px;
+  height: 300px;
 }
-
 .form-horizontal {
   width: 300px;
 }
-
 .control-label {
   color: #131367;
 }
-
 .button {
   float: left;
   display: inline-block;
 }
-
 .btn {
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    margin: 15px 0 15px 0;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin: 15px 0;
 }
-
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: 0 none;
 }
-
 .btn-special {
-    background: #131367;
-    color: #ffffff;
+  background: #131367;
+  color: #ffffff;
 }
-
-.btn-special:hover, .btn-special:focus, .btn-special:active, .btn-special.active, .open > .dropdown-toggle.btn-special {
-    background: #a9adae;
-    color: #ffffff;
+.btn-special:hover,
+.btn-special:focus,
+.btn-special:active,
+.btn-special.active,
+.open > .dropdown-toggle.btn-special {
+  background: #a9adae;
+  color: #ffffff;
 }
-
-.btn-special:active, .btn-special.active {
-    background: #a9adae;
-    box-shadow: none;
+.btn-special:active,
+.btn-special.active {
+  background: #a9adae;
+  box-shadow: none;
 }
-
 .btn-light {
-    background: #a9adae;
-    color: #ffffff;
+  background: #a9adae;
+  color: #ffffff;
 }
-
-.btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light.active, .open > .dropdown-toggle.btn-light {
-    background: #a9adae;
-    color: #ffffff;
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.btn-light.active,
+.open > .dropdown-toggle.btn-light {
+  background: #a9adae;
+  color: #ffffff;
 }
-
-.btn-light:active, .btn-light.active {
-    background: #D4D4D4;
-    box-shadow: none;
+.btn-light:active,
+.btn-light.active {
+  background: #D4D4D4;
+  box-shadow: none;
 }
-
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
@@ -248,47 +219,37 @@ a:-webkit-any-link {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
 }
-
 .navbar-default {
   border-radius: 0;
   background: #FFFFFF;
   border-bottom: 1px solid #E5E5E5;
 }
-
 .navbar-brand-icon {
   height: 20px;
 }
-
 .navbar {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
 .navbar-right {
- padding-right: 30px;
+  padding-right: 30px;
 }
-
 .navbar-header {
- padding-left: 30px;
+  padding-left: 30px;
 }
-
 @media (min-width: 760px) {
-
   #map {
     height: 300px;
     width: 100%;
   }
-
   .map-panel {
     height: 300px;
     width: 100%;
   }
-
   .index-panel {
     height: 425px;
     width: 100%;
   }
-
   .navbar-default .navbar-nav > .open > a,
   .navbar-default .navbar-nav > .open > a:hover,
   .navbar-default .navbar-nav > .open > a:focus {
@@ -298,17 +259,17 @@ a:-webkit-any-link {
     border-right: 1px solid #ddd;
     padding-right: 10px;
   }
-
-  .navbar .nav>li.dropdown.open>.dropdown-toggle, .navbar .nav>li.dropdown.active>.dropdown-toggle, .navbar .nav>li.dropdown.open.active>.dropdown-toggle {
+  .navbar .nav>li.dropdown.open>.dropdown-toggle,
+  .navbar .nav>li.dropdown.active>.dropdown-toggle,
+  .navbar .nav>li.dropdown.open.active>.dropdown-toggle {
     background: #fff;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     padding-left: 14px;
     padding-right: 14px;
     position: relative;
-    z-index: 9999
+    z-index: 9999;
   }
-
   .navbar .nav>li>.dropdown-menu {
     border: 1px solid #ccc;
     -webkit-border-radius: 0 0 3px 3px;
@@ -320,7 +281,6 @@ a:-webkit-any-link {
     /*left: -1px;*/
     min-width: 200px;
     margin: -1px 0 0;
-    z-index: 9991
+    z-index: 9991;
   }
-
 }

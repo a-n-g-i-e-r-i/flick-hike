@@ -4,7 +4,7 @@
 
 **Welcome Page**
 
-![Screenshot 1](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png?raw=true)
+![Screenshot 1](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png?raw=true =100px)
 
 ![Screenshot 2](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-02.png?raw=true)
 

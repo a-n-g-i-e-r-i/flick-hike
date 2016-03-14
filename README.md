@@ -4,41 +4,41 @@
 
 **Welcome Page**
 
-![Screenshot 1](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png?raw=true =100px)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 2](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-02.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-02.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 3](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-03.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-03.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 4](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-04.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-04.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 5](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-05.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-05.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 6](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-06.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-06.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 7](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-07.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-07.png" alt="image unavailable" width="200px"/>
 
 **Scenes Index and Autocomplete Search**
 
-![Screenshot 10](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-10.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-10.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 11](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-11.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-11.png" alt="image unavailable" width="200px"/>
 
 **Scene Show Page**
 
-![Screenshot 12](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-13.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-13.png" alt="image unavailable" width="200px"/>
 
 **Add Scene To Existing List**
 
-![Screenshot 13](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-12.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-12.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 14](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-14.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-14.png" alt="image unavailable" width="200px"/>
 
 **About Page**
 
-![Screenshot 8](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-08.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-08.png" alt="image unavailable" width="200px"/>
 
-![Screenshot 9](https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-09.png?raw=true)
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-09.png" alt="image unavailable" width="200px"/>
 
 # Contents
 

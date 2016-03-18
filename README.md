@@ -2,6 +2,33 @@
 
 **[FLICK HIKE](http://www.filmhikes.com) is San Francisco's filmic gateway to urban life. Curate lists of memorable film scenes, plot your own filmic adventures around the city, and share them with others.**
 
+<img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png" alt="image unavailable" width="200px"/>
+
+# Contents
+
+* **[Screenshots](#screenshots)**
+take a peek at the app
+* **[Getting Started](#getting-started)**
+get your goggles on the code
+* **[Overview](#overview)**
+but what IS a FLICK HIKE?
+* **[Project Planning](#project-planning)**
+get with the picture
+* **[Wireframes](#wireframes)**
+iterative storyboarding
+* **[User Stories](#user-stories)**
+process, features, organization
+* **[Technologies](#technologies)**
+take a look at the tech
+* **[Big Goals](#big-goals)**
+big goals for future feature development
+* **[About](#about)**
+related code and applications
+
+---
+
+# Screenshots
+
 **Welcome Page**
 
 <img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-01.png" alt="image unavailable" width="200px"/>
@@ -40,28 +67,6 @@
 
 <img src="https://github.com/isangieri/flick-hike/blob/master/app/assets/images/flick-hike-mobile-09.png" alt="image unavailable" width="200px"/>
 
-# Contents
-
-* **[Getting Started](#getting-started)**
-get your goggles on the code
-* **[Overview](#overview)**
-but what IS a FLICK HIKE?
-* **[Project & Planning](#project-planning)**
-get with the picture
-* **[Wireframes](#wireframes)**
-iterative storyboarding
-* **[User Stories](#user-stories)**
-process, features, organization
-* **[Technologies](#technologies)**
-take a look at the tech
-* **[Big Goals](#big-goals)**
-big goals for future feature development
-* **[About](#about)**
-related code and applications
-
----
-
-
 # Getting Started
 
 ###### work with this application's code
@@ -90,7 +95,7 @@ Checkout the [project planning](#project-planning) section below a look at how t
 
 ---
 
-# Project & Planning
+# Project Planning
 
 ###### get with the picture
 

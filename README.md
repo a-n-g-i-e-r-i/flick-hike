@@ -22,8 +22,6 @@ process, features, organization
 take a look at the tech
 * **[Big Goals](#big-goals)**
 big goals for future feature development
-* **[About](#about)**
-related code and applications
 
 ---
 
@@ -333,13 +331,3 @@ More options for hike generation give users more power over what type of hike th
 
 * **Add Estimated Length And Duration of Entire Hike** 
 Currently Google Directions Service give duration and length of each hike leg. The new feature will give an overview of the entire hike's length and duration
-
----
-
-## About
-
-###### check out Is Angieri's Github page and website
-
-[Github](https://github.com/isangieri)
-
-[www.isangieri.com](http://www.isangieri.com)
